@@ -1,6 +1,10 @@
 # Dependencies
 node_modules/
 
+# Local server & development scripts
+server.js
+test_cdp.py
+
 # Local server logs & tunnel info
 tunnel.txt
 tunnel_url.txt

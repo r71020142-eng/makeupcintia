@@ -17,19 +17,19 @@ document.addEventListener('DOMContentLoaded', function () {
   function injectLogos() {
     const logoContainers = document.querySelectorAll('.sie-menu_1, [data-sid="menu_1"], .sie-mobile-nav_11, [data-sid="mobile-nav_11"]');
     logoContainers.forEach(el => {
-      el.innerHTML = '<img src="assets/images/cintya_nunes_logo.svg" alt="Cintya Nunes Makeup Artist & Hairstyles" style="width:100%;height:100%;object-fit:contain;">';
+      el.innerHTML = '<img src="/assets/images/cintya_nunes_logo.svg" alt="Cintya Nunes Makeup Artist & Hairstyles" style="width:100%;height:100%;object-fit:contain;">';
     });
 
     const footerLogos = document.querySelectorAll('.sie-footer_16, [data-sid="footer_16"]');
     footerLogos.forEach(el => {
-      el.innerHTML = '<img src="assets/images/cintya_nunes_logo.svg" alt="Cintya Nunes Logo" style="width:100%;height:100%;object-fit:contain;">';
+      el.innerHTML = '<img src="/assets/images/cintya_nunes_logo.svg" alt="Cintya Nunes Logo" style="width:100%;height:100%;object-fit:contain;">';
     });
 
     // Replace founder portrait in meet section with Cintya's photo
     const meetPhotos = document.querySelectorAll('.sie-meet_1, [data-sid="meet_1"], .sie-bio_0, [data-sid="bio_0"]');
     meetPhotos.forEach(el => {
       const imgDiv = el.querySelector('.se-img') || el;
-      imgDiv.style.backgroundImage = 'url("assets/images/cintya_avatar_hq.png")';
+      imgDiv.style.backgroundImage = 'url("/assets/images/cintya_avatar_hq.png")';
       imgDiv.style.backgroundSize = 'cover';
       imgDiv.style.backgroundPosition = 'center 15%';
     });
