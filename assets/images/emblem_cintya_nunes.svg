@@ -1,0 +1,45 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="emblemGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2DFB3"/>
+      <stop offset="40%" stop-color="#C8A261"/>
+      <stop offset="80%" stop-color="#D9B777"/>
+      <stop offset="100%" stop-color="#9C773A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Frames -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#emblemGold)" stroke-width="2"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="url(#emblemGold)" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  <!-- Monogram Mark CN -->
+  <g transform="translate(62, 58) scale(1.1)">
+    <!-- C -->
+    <path d="M 32 10 C 20 10 10 20 10 32 C 10 44 20 54 32 54 C 38 54 44 50 47 45 C 45 44 42 46 38 46 C 28 46 20 38 20 32 C 20 26 28 18 38 18 C 42 18 45 20 47 19 C 44 14 38 10 32 10 Z" 
+          fill="url(#emblemGold)" />
+    <!-- N -->
+    <path d="M 35 16 L 41 16 L 41 46 L 35 46 Z" fill="url(#emblemGold)" opacity="0.9"/>
+    <path d="M 40 18 L 57 46 L 62 46 L 45 18 Z" fill="url(#emblemGold)"/>
+    <path d="M 57 16 L 63 16 L 63 46 L 57 46 Z" fill="url(#emblemGold)"/>
+    <!-- Beauty Star Sparkle -->
+    <path d="M 60 11 Q 63 7 66 11 Q 70 14 66 17 Q 63 21 60 17 Q 56 14 60 11 Z" fill="url(#emblemGold)"/>
+  </g>
+
+  <!-- Curving text or bottom label -->
+  <text x="100" y="152" 
+        text-anchor="middle" 
+        font-family="'Playfair Display', serif" 
+        font-size="11" 
+        letter-spacing="0.22em" 
+        fill="#37302A">
+    CINTYA NUNES
+  </text>
+  <text x="100" y="165" 
+        text-anchor="middle" 
+        font-family="'Libre Franklin', sans-serif" 
+        font-size="6" 
+        letter-spacing="0.25em" 
+        fill="#C8A261">
+    MAKEUP &amp; HAIR
+  </text>
+</svg>

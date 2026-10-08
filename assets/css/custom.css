@@ -1,0 +1,2765 @@
+/* =========================================================
+   CINTYA NUNES | MAKEUP ARTIST & HAIRSTYLES
+   Paleta de Cores e Identidade Visual Oficial
+   ========================================================= */
+
+:root {
+  --color-bg: #FAF7F2;          /* Marfim Nobre */
+  --color-gold: #C8A261;        /* Dourado Imperial */
+  --color-gold-light: #EAD19B;  /* Dourado Suave */
+  --color-mocha: #5C4A3E;       /* Mocha Elegante */
+  --color-graphite: #1E1B18;    /* Grafite Luxo */
+  --color-nude: #E2D1C3;        /* Nude Rosado */
+  --color-white: #FFFFFF;
+}
+
+@font-face {
+  font-family: 'PromenadeRegular';
+  src: url('../fonts/promenade-regular.woff') format('woff'),
+       url('https://static.showit.co/file/zKu2YY8-h8L56N_T2ZdDBA/139976/promenade-regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PromenadeItalic';
+  src: url('../fonts/promenade-italic.woff') format('woff'),
+       url('https://static.showit.co/file/sVTlNUNP7l50KjbhWpXk9g/139976/promenade-italic.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LouizeTrial-Italic';
+  src: url('../fonts/louizetrial-italic.woff') format('woff'),
+       url('https://static.showit.co/file/WfwqvbJALczS8s9JDaPqNA/139976/louizetrial-italic.woff') format('woff');
+  font-display: swap;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg) !important;
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg) !important;
+  color: var(--color-graphite);
+  font-family: 'Libre Franklin', sans-serif;
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative;
+}
+
+/* Base Canvas & Backgrounds */
+.sp, .sb, .ss-bg {
+  background-color: var(--color-bg);
+}
+
+/* Sticky Header */
+#menu {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000 !important;
+  background-color: rgba(250, 247, 242, 0.96) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200, 162, 97, 0.2);
+  box-shadow: 0 4px 20px rgba(30, 27, 24, 0.04);
+  transition: all 0.3s ease;
+}
+
+/* Custom Logo Placement */
+.cintya-nav-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.cintya-nav-logo img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Luxury Primary Button */
+.st-primary {
+  background-color: var(--color-mocha) !important;
+  border: 1px solid var(--color-gold) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 4px 15px rgba(92, 74, 62, 0.15) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.st-primary span {
+  color: var(--color-bg) !important;
+  letter-spacing: 0.18em !important;
+  font-weight: 500 !important;
+}
+
+.st-primary:hover, .se-button.st-primary:hover {
+  background-color: var(--color-gold) !important;
+  border-color: var(--color-gold-light) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(200, 162, 97, 0.3) !important;
+}
+
+.st-primary:hover span {
+  color: var(--color-graphite) !important;
+}
+
+/* Luxury Secondary Button */
+.st-secondary {
+  background-color: var(--color-bg) !important;
+  border: 1px solid var(--color-mocha) !important;
+  border-radius: 2px !important;
+  transition: all 0.4s ease !important;
+}
+
+.st-secondary span {
+  color: var(--color-mocha) !important;
+  letter-spacing: 0.15em !important;
+}
+
+.st-secondary:hover {
+  background-color: var(--color-mocha) !important;
+  transform: translateY(-2px);
+}
+
+.st-secondary:hover span {
+  color: var(--color-bg) !important;
+}
+
+/* Gold Accent Lines */
+.se-line line, .se-line svg {
+  stroke: var(--color-gold) !important;
+}
+
+/* Subtle Highlights Story Bar */
+.cintya-highlights-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 10px;
+  margin: 10px auto;
+  max-width: 900px;
+  overflow-x: auto;
+}
+
+.cintya-highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.cintya-highlight-item:hover {
+  transform: translateY(-4px);
+}
+
+.cintya-highlight-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold), var(--color-mocha));
+  box-shadow: 0 4px 14px rgba(200, 162, 97, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cintya-highlight-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-white);
+}
+
+.cintya-highlight-label {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-mocha);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 72px;
+  background-color: var(--color-graphite);
+  color: #FAF7F2;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile Nav Drawer */
+#mobile-nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  background-color: rgba(30, 27, 24, 0.98) !important;
+  overflow-y: auto;
+}
+
+#mobile-nav.is-open {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Lookbook Continuous Marquee */
+.lookbook-marquee-wrapper {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.lookbook-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.lookbook-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.lookbook-marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.lookbook-marquee-track-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.lookbook-item {
+  flex-shrink: 0;
+  margin-right: 18px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.lookbook-item:hover {
+  transform: scale(1.03);
+}
+
+.lookbook-item img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* WhatsApp Pre-booking Form */
+.cintya-booking-card {
+  background: var(--color-white);
+  padding: 40px 35px;
+  border: 1px solid var(--color-nude);
+  border-top: 4px solid var(--color-gold);
+  box-shadow: 0 15px 50px rgba(92, 74, 62, 0.08);
+  border-radius: 3px;
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+.cintya-booking-card h3 {
+  font-family: 'PromenadeRegular', serif;
+  font-size: 32px;
+  color: var(--color-mocha);
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-weight: normal;
+}
+
+.cintya-booking-card p.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* =========================================================
+   TEXT VISIBILITY & ANTI-CLIPPING FIXES
+   ========================================================= */
+.se-t, .se-t *, h1, h2, h3, h4, p, span {
+  overflow: visible !important;
+}
+
+.se:has(.se-t) {
+  overflow: visible !important;
+}
+
+/* Unbroken Dropcap in Services */
+.cintya-dropcap {
+  float: left;
+  font-family: 'PromenadeItalic', serif !important;
+  font-size: 50px !important;
+  line-height: 0.75 !important;
+  padding-top: 5px;
+  padding-right: 8px;
+  padding-bottom: 0px;
+  color: var(--color-gold) !important;
+  font-weight: normal !important;
+}
+
+/* Headings Anti-Clipping */
+.sie-portfolio-1_3 {
+  height: auto !important;
+  min-height: 120px !important;
+  overflow: visible !important;
+}
+
+.sie-portfolio-1_3-text {
+  line-height: 1.05 !important;
+  overflow: visible !important;
+}
+
+/* =========================================================
+   HERO CLEANUP: REMOVE TEMPLATE MODEL & FORCE CINTYA BRIDE
+   ========================================================= */
+.sie-hero_3 {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+.sie-hero_0 .se-img {
+  background-image: url('../images/cintya/IMG_4381.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* =========================================================
+   SECOND FOLD: FIXED STICKY BACKGROUND WITH LUXURY OVERLAY
+   & SMOOTH SCROLLING RIGHT-SIDE CONTENT (SHOWIT SIGNATURE)
+   ========================================================= */
+
+/* Desktop (769px+): Sticky Left Half Background + Scrolling Right Content */
+@media (min-width: 769px) {
+  /* 1. Sticky background container pinned to viewport */
+  #scroll-image {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: sticky !important;
+    top: 73px !important;
+    height: calc(100vh - 73px) !important;
+    min-height: 680px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    margin-bottom: calc(-100vh + 73px) !important;
+    padding: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+    background-color: var(--color-bg) !important;
+  }
+
+  #scroll-image .ss-s,
+  #scroll-image .ss-bg {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    background-color: var(--color-bg) !important;
+  }
+
+  #scroll-image .sc {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    position: relative !important;
+  }
+
+  /* Authentic Bride Photo fixed on the left half */
+  .d .sie-scroll-image_0,
+  #scroll-image .sie-scroll-image_0 {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 50% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .sie-scroll-image_0 .se-img {
+    background-image: url('../images/cintya/IMG_0661.jpg') !important;
+    background-size: cover !important;
+    background-position: center 30% !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Leve película por cima da foto de background */
+  .sie-scroll-image_0::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(135deg, rgba(30, 27, 24, 0.22) 0%, rgba(30, 27, 24, 0.08) 60%, rgba(200, 162, 97, 0.12) 100%) !important;
+    pointer-events: none !important;
+  }
+
+  /* 2. Portfolio-1: Transparent canvas with scrolling right column */
+  #portfolio-1 {
+    position: relative !important;
+    min-height: calc(100vh - 73px) !important;
+    height: auto !important;
+    background-color: transparent !important;
+    padding: 80px 0 100px 0 !important;
+    overflow: visible !important;
+    z-index: 2 !important;
+    pointer-events: auto !important;
+  }
+
+  #portfolio-1 .ss-s,
+  #portfolio-1 .ss-bg {
+    background-color: transparent !important;
+    position: relative !important;
+  }
+
+  #portfolio-1 .sc {
+    position: relative !important;
+    width: 1200px !important;
+    max-width: 1200px !important;
+    min-height: 600px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Hide the card version since image is now the sticky background */
+  .d .sie-portfolio-1_2,
+  #portfolio-1 .sie-portfolio-1_2 {
+    display: none !important;
+  }
+
+  /* Right column: luxury editorial typography scrolling up */
+  .d .sie-portfolio-1_5,
+  #portfolio-1 .sie-portfolio-1_5 {
+    position: absolute !important;
+    left: clamp(520px, 53%, 640px) !important;
+    top: 60px !important;
+    width: min(500px, 45%) !important;
+    height: 30px !important;
+    text-align: left !important;
+  }
+  .d .sie-portfolio-1_5-text,
+  #portfolio-1 .sie-portfolio-1_5-text {
+    color: var(--color-gold) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+  }
+
+  .d .sie-portfolio-1_4,
+  #portfolio-1 .sie-portfolio-1_4 {
+    position: absolute !important;
+    left: clamp(520px, 53%, 640px) !important;
+    top: 95px !important;
+    width: min(500px, 45%) !important;
+    height: 35px !important;
+    text-align: left !important;
+  }
+  .d .sie-portfolio-1_4-text,
+  #portfolio-1 .sie-portfolio-1_4-text {
+    color: var(--color-mocha) !important;
+    font-family: 'LouizeTrial-Italic', 'PromenadeItalic', serif !important;
+    font-size: 28px !important;
+    text-align: left !important;
+    font-style: italic !important;
+  }
+
+  .d .sie-portfolio-1_3,
+  #portfolio-1 .sie-portfolio-1_3 {
+    position: absolute !important;
+    left: clamp(520px, 53%, 640px) !important;
+    top: 140px !important;
+    width: min(520px, 45%) !important;
+    height: auto !important;
+    min-height: 140px !important;
+    text-align: left !important;
+  }
+  .d .sie-portfolio-1_3-text,
+  #portfolio-1 .sie-portfolio-1_3-text {
+    color: var(--color-graphite) !important;
+    font-family: 'PromenadeRegular', serif !important;
+    font-size: clamp(38px, 4.5vw, 64px) !important;
+    line-height: 1.05 !important;
+    text-align: left !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .d .sie-portfolio-1_1,
+  #portfolio-1 .sie-portfolio-1_1 {
+    position: absolute !important;
+    left: clamp(520px, 53%, 640px) !important;
+    top: clamp(280px, 28vw, 340px) !important;
+    width: min(480px, 45%) !important;
+    height: auto !important;
+  }
+  .d .sie-portfolio-1_1-text,
+  #portfolio-1 .sie-portfolio-1_1-text {
+    color: var(--color-mocha) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    text-align: left !important;
+    font-weight: 300 !important;
+    opacity: 1 !important;
+  }
+
+  .d .sie-portfolio-1_0,
+  #portfolio-1 .sie-portfolio-1_0 {
+    position: absolute !important;
+    left: clamp(520px, 53%, 640px) !important;
+    top: clamp(420px, 40vw, 480px) !important;
+    width: 220px !important;
+    height: 48px !important;
+  }
+
+  /* 3. Services: Also transparent so it continues over the sticky background */
+  #services {
+    position: relative !important;
+    background-color: transparent !important;
+    z-index: 2 !important;
+    padding: 60px 0 100px 0 !important;
+  }
+  #services .ss-s,
+  #services .ss-bg {
+    background-color: transparent !important;
+  }
+}
+
+/* Mobile & Tablet (<= 768px): 100% RESPONSIVE & CENTERED ARCHITECTURE */
+@media (max-width: 768px) {
+  /* 0. Global Mobile Centering & Overflow Protection */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+  }
+
+  .sp, .sb {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+
+  .ss-bg, .ss-s {
+    width: 100% !important;
+    left: 0 !important;
+    position: relative !important;
+  }
+
+  /* CRUCIAL ROOT-CAUSE FIX: Ensure .se-t is in normal flow so parent containers do not collapse to 0px */
+  .se-t {
+    position: relative !important;
+    height: auto !important;
+    width: 100% !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  .se:has(.se-t) {
+    height: auto !important;
+    min-height: fit-content !important;
+    overflow: visible !important;
+  }
+
+  /* Force transform: none on all mobile canvases so Showit JS scaling cannot shift static flex elements */
+  #menu .sc,
+  #hero .sc,
+  #portfolio-1 .sc,
+  #services .sc,
+  #meet .sc,
+  #contact .sc,
+  #badges .sc,
+  #portfolio-2 .sc,
+  #testimonials .sc,
+  #looks .sc,
+  #footer .sc {
+    transform: none !important;
+    zoom: 1 !important;
+  }
+
+  /* CRUCIAL CONTAINING-BLOCK FIX:
+     All flex items in content sections MUST be position: relative and transform: none
+     so that absolute children (.se-img, .se-simple, .sg-s) are strictly contained inside their cards */
+  #portfolio-1 .se,
+  #services .se,
+  #meet .se,
+  #contact .se,
+  #badges .se,
+  #portfolio-2 .se,
+  #testimonials .se,
+  #looks .se,
+  #footer .se {
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  /* 1. Header Navigation Bar */
+  #menu {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 60px !important;
+    z-index: 1000 !important;
+    background-color: rgba(250, 247, 242, 0.98) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+  #menu .ss-s, #menu .ss-bg {
+    height: 60px !important;
+  }
+  #menu .sc {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 60px !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transform: none !important;
+  }
+  .m .sie-menu_1, #menu .sie-menu_1 {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 34px !important;
+    width: 220px !important;
+    max-width: calc(100vw - 90px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10 !important;
+  }
+  .sie-menu_1 img, .sie-menu_1 .se-img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+  .m .sie-menu_0, #menu .sie-menu_0 {
+    position: absolute !important;
+    right: 18px !important;
+    left: auto !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 36px !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 20 !important;
+    margin: 0 !important;
+  }
+  .m .sie-menu_0 svg, #menu .sie-menu_0 svg {
+    width: 26px !important;
+    height: 20px !important;
+    fill: var(--color-gold) !important;
+  }
+
+  /* 2. Hero Section */
+  #hero {
+    position: relative !important;
+    height: min(90vh, 700px) !important;
+    min-height: 540px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+  #hero .ss-s, #hero .ss-bg {
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute !important;
+    inset: 0 !important;
+  }
+  #hero .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: 100% !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+  }
+  .m .sie-hero_0, #hero .sie-hero_0 {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+  }
+  .sie-hero_0 .se-img {
+    background-image: url('../images/cintya/IMG_4381.jpg') !important;
+    background-size: cover !important;
+    background-position: center 25% !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .sie-hero_3, .sie-hero_1, #hero .sie-hero_1 {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  .m .sie-hero_4, #hero .sie-hero_4 {
+    position: absolute !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+  }
+  .m .sie-hero_4, #hero .sie-hero_4 {
+    bottom: 0 !important;
+    height: 280px !important;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(20,16,14,0.88) 100%) !important;
+  }
+  .m .sie-hero_2, #hero .sie-hero_2 {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: 24px !important;
+    width: min(88vw, 320px) !important;
+    height: 75px !important;
+    z-index: 3 !important;
+  }
+  .m .sie-hero_15, #hero .sie-hero_15 {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 50px !important;
+    top: auto !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 3 !important;
+  }
+  .m .sie-hero_15-text, #hero .sie-hero_15-text {
+    color: #FAF7F2 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    display: block !important;
+  }
+  .m .sie-hero_16, #hero .sie-hero_16 {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 24px !important;
+    top: auto !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 3 !important;
+  }
+  .m .sie-hero_16-text, #hero .sie-hero_16-text {
+    color: var(--color-gold) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+    font-size: 13px !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    display: block !important;
+  }
+
+  /* 2.5 Hide Desktop Scroll-Image Canvas on Mobile */
+  #scroll-image {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* 3. Second Fold (#portfolio-1) */
+  #portfolio-1 {
+    position: relative !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 50px 20px 45px 20px !important;
+    margin-bottom: 10px !important;
+    overflow-x: hidden !important;
+    background-color: var(--color-bg) !important;
+    box-sizing: border-box !important;
+  }
+  #portfolio-1, #portfolio-1 * {
+    box-sizing: border-box !important;
+  }
+  #portfolio-1 .ss-s, #portfolio-1 .ss-bg {
+    position: relative !important;
+    height: auto !important;
+    width: 100% !important;
+    background: transparent !important;
+  }
+  #portfolio-1 .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .m .sie-portfolio-1_5, #portfolio-1 .sie-portfolio-1_5 {
+    width: 100% !important;
+    height: auto !important;
+    order: 1 !important;
+    margin-bottom: 6px !important;
+    text-align: center !important;
+  }
+  .m .sie-portfolio-1_5-text, #portfolio-1 .sie-portfolio-1_5-text {
+    color: var(--color-gold) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    display: block !important;
+  }
+  .m .sie-portfolio-1_4, #portfolio-1 .sie-portfolio-1_4 {
+    width: 100% !important;
+    height: auto !important;
+    order: 2 !important;
+    margin-bottom: 6px !important;
+    text-align: center !important;
+  }
+  .m .sie-portfolio-1_4-text, #portfolio-1 .sie-portfolio-1_4-text {
+    color: var(--color-mocha) !important;
+    font-family: 'LouizeTrial-Italic', 'PromenadeItalic', serif !important;
+    font-size: clamp(20px, 4vw, 24px) !important;
+    text-align: center !important;
+    font-style: italic !important;
+    display: block !important;
+  }
+  .m .sie-portfolio-1_3, #portfolio-1 .sie-portfolio-1_3 {
+    width: 100% !important;
+    height: auto !important;
+    order: 3 !important;
+    margin-bottom: 22px !important;
+    text-align: center !important;
+  }
+  .m .sie-portfolio-1_3-text, #portfolio-1 .sie-portfolio-1_3-text {
+    color: var(--color-graphite) !important;
+    font-family: 'PromenadeRegular', serif !important;
+    font-size: clamp(30px, 6.5vw, 42px) !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+    display: block !important;
+  }
+  .m .sie-portfolio-1_2, #portfolio-1 .sie-portfolio-1_2 {
+    width: 100% !important;
+    max-width: 380px !important;
+    height: clamp(220px, 58vw, 290px) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(30, 27, 24, 0.12) !important;
+    order: 4 !important;
+    margin: 0 auto 22px auto !important;
+  }
+  .sie-portfolio-1_2 .se-img {
+    background-image: url('../images/cintya/IMG_0661.jpg') !important;
+    background-size: cover !important;
+    background-position: center 30% !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .m .sie-portfolio-1_1, #portfolio-1 .sie-portfolio-1_1 {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    order: 5 !important;
+    margin: 0 auto 24px auto !important;
+    text-align: center !important;
+  }
+  .m .sie-portfolio-1_1-text, #portfolio-1 .sie-portfolio-1_1-text {
+    color: var(--color-mocha) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: clamp(13px, 2.5vw, 15px) !important;
+    line-height: 1.8 !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+  .m .sie-portfolio-1_0, #portfolio-1 .sie-portfolio-1_0 {
+    width: 220px !important;
+    height: 46px !important;
+    order: 6 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* 4. Services Section (#services) */
+  #services {
+    position: relative !important;
+    background-color: var(--color-bg) !important;
+    padding: 50px 20px 50px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  #services .ss-s, #services .ss-bg {
+    height: auto !important;
+    position: relative !important;
+    background: transparent !important;
+  }
+  #services .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .m .sie-services_7, #services .sie-services_7 {
+    width: 100% !important;
+    height: auto !important;
+    order: 1 !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+  .m .sie-services_7-text, #services .sie-services_7-text {
+    font-family: 'LouizeTrial-Italic', 'PromenadeItalic', serif !important;
+    font-size: clamp(24px, 5.5vw, 32px) !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    color: var(--color-graphite) !important;
+    display: block !important;
+  }
+  .m .sie-services_5, #services .sie-services_5 {
+    width: 100% !important;
+    height: auto !important;
+    order: 2 !important;
+    margin-bottom: 22px !important;
+    text-align: center !important;
+  }
+  .m .sie-services_5-text, #services .sie-services_5-text {
+    color: var(--color-gold) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    display: block !important;
+  }
+  .m .sie-services_4, .m .sie-services_6, .m .sie-services_8,
+  #services .sie-services_4, #services .sie-services_6, #services .sie-services_8 {
+    display: none !important;
+  }
+  .m .sie-services_3, #services .sie-services_3 {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: clamp(260px, 70vw, 360px) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(30, 27, 24, 0.12) !important;
+    order: 3 !important;
+    margin: 0 auto 24px auto !important;
+  }
+  .sie-services_3 .se-img {
+    background-image: url('../images/cintya/IMG_4338.jpg') !important;
+    background-size: cover !important;
+    background-position: center 25% !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .m .sie-services_1, #services .sie-services_1 {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    order: 4 !important;
+    margin: 0 auto 22px auto !important;
+    text-align: center !important;
+  }
+  .m .sie-services_1-text, #services .sie-services_1-text {
+    color: var(--color-mocha) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+  .m .sie-services_0, #services .sie-services_0 {
+    width: 220px !important;
+    height: 46px !important;
+    order: 5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* 5. Meet Section (#meet) */
+  #meet {
+    position: relative !important;
+    background-color: var(--color-bg) !important;
+    padding: 50px 20px 50px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  /* Remove old template background image from #meet completely */
+  #meet, #meet .sb-i, #meet .sb-c, #meet .sb-m, #meet .ss-bg {
+    background-image: none !important;
+    background-color: var(--color-bg) !important;
+    height: auto !important;
+    position: relative !important;
+  }
+  #meet .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .m .sie-meet_0, .m .sie-meet_2, .m .sie-meet_3,
+  #meet .sie-meet_0, #meet .sie-meet_2, #meet .sie-meet_3 {
+    display: none !important;
+  }
+  .m .sie-meet_1, #meet .sie-meet_1 {
+    width: 160px !important;
+    height: 160px !important;
+    border-radius: 50% !important;
+    border: 3px solid var(--color-gold) !important;
+    box-shadow: 0 8px 30px rgba(30, 27, 24, 0.15) !important;
+    overflow: hidden !important;
+    order: 1 !important;
+    margin: 0 auto 20px auto !important;
+  }
+  .sie-meet_1 .se-img {
+    background-image: url('../images/cintya_avatar_hq.png') !important;
+    background-size: cover !important;
+    background-position: center 20% !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+  }
+  .m .sie-meet_5, #meet .sie-meet_5 {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    order: 2 !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+  }
+  .m .sie-meet_5-text, #meet .sie-meet_5-text {
+    color: var(--color-graphite) !important;
+    font-family: 'LouizeTrial-Italic', 'PromenadeItalic', serif !important;
+    font-size: clamp(20px, 4.8vw, 26px) !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    font-style: italic !important;
+    display: block !important;
+  }
+  .m .sie-meet_6, #meet .sie-meet_6 {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    order: 3 !important;
+    margin-bottom: 24px !important;
+    text-align: center !important;
+  }
+  .m .sie-meet_6-text, #meet .sie-meet_6-text {
+    color: var(--color-mocha) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+  .m .sie-meet_4, #meet .sie-meet_4 {
+    width: 260px !important;
+    height: 46px !important;
+    order: 4 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* 6. Contact / Fit Section (#contact) */
+  #contact {
+    position: relative !important;
+    background-color: var(--color-bg) !important;
+    padding: 50px 20px 50px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  #contact .ss-s, #contact .ss-bg {
+    height: auto !important;
+    position: relative !important;
+    background: transparent !important;
+  }
+  #contact .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .m .sie-contact_4, #contact .sie-contact_4 {
+    width: 100% !important;
+    height: auto !important;
+    order: 1 !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+  }
+  .m .sie-contact_4-text, #contact .sie-contact_4-text {
+    color: var(--color-gold) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    display: block !important;
+  }
+  .m .sie-contact_3, #contact .sie-contact_3 {
+    width: 100% !important;
+    height: auto !important;
+    order: 2 !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+  }
+  .m .sie-contact_3-text, #contact .sie-contact_3-text {
+    color: var(--color-graphite) !important;
+    font-family: 'LouizeTrial-Italic', 'PromenadeItalic', serif !important;
+    font-size: clamp(24px, 5.5vw, 32px) !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    font-style: italic !important;
+    display: block !important;
+  }
+  .m .sie-contact_2, #contact .sie-contact_2 {
+    width: 56px !important;
+    height: 56px !important;
+    order: 3 !important;
+    margin: 0 auto 16px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .sie-contact_2 .se-img {
+    background-image: url('../images/cintya_nunes_monogram.svg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .m .sie-contact_1, #contact .sie-contact_1 {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    order: 4 !important;
+    margin: 0 auto 24px auto !important;
+    text-align: center !important;
+  }
+  .m .sie-contact_1-text, #contact .sie-contact_1-text {
+    color: var(--color-mocha) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    text-align: center !important;
+    opacity: 1 !important;
+    display: block !important;
+  }
+  .m .sie-contact_0, #contact .sie-contact_0 {
+    width: 290px !important;
+    height: 46px !important;
+    order: 5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* 7. Editorial Badges Section (#badges) */
+  #badges {
+    position: relative !important;
+    background-color: var(--color-bg) !important;
+    padding: 35px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: block !important;
+  }
+  #badges .ss-s, #badges .ss-bg {
+    height: auto !important;
+    position: relative !important;
+    background: transparent !important;
+  }
+  #badges {
+    position: relative !important;
+    background-color: var(--color-bg) !important;
+    padding: 30px 15px !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: block !important;
+  }
+  #badges .sc {
+    width: 100% !important;
+    max-width: 380px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: clamp(12px, 3.5vw, 22px) !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  #badges .sie-badges_0,
+  #badges .sie-badges_1,
+  #badges .sie-badges_2 {
+    width: clamp(80px, 26vw, 105px) !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+  #badges .se-img, #badges img {
+    max-height: 34px !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    opacity: 0.82 !important;
+  }
+
+  /* 8. Lookbook / Portfolio-2 (#portfolio-2) */
+  #portfolio-2 {
+    position: relative !important;
+    background-color: var(--color-bg) !important;
+    padding: 50px 0 45px 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow-x: hidden !important;
+  }
+  #portfolio-2 .ss-s, #portfolio-2 .ss-bg {
+    height: auto !important;
+    position: relative !important;
+    background: transparent !important;
+  }
+  #portfolio-2 .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+  .m .sie-portfolio-2_6, #portfolio-2 .sie-portfolio-2_6 {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    order: 1 !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+  .m .sie-portfolio-2_6-text, #portfolio-2 .sie-portfolio-2_6-text {
+    color: var(--color-graphite) !important;
+    font-family: 'PromenadeRegular', serif !important;
+    font-size: clamp(32px, 7.5vw, 44px) !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    text-shadow: none !important;
+    display: block !important;
+  }
+  .m .sie-portfolio-2_5, #portfolio-2 .sie-portfolio-2_5 {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    order: 2 !important;
+    margin-bottom: 24px !important;
+    padding: 0 15px !important;
+    text-align: center !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+  .m .sie-portfolio-2_5-text, #portfolio-2 .sie-portfolio-2_5-text {
+    color: var(--color-mocha) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0.08em !important;
+    line-height: 1.7 !important;
+    text-transform: none !important;
+    text-align: center !important;
+    text-shadow: none !important;
+    opacity: 0.9 !important;
+    display: block !important;
+  }
+  .m .sie-portfolio-2_0,
+  #portfolio-2 .sie-portfolio-2_0 {
+    position: relative !important;
+    width: 100vw !important;
+    height: 190px !important;
+    order: 3 !important;
+    margin-bottom: 24px !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+  .m .sie-portfolio-2_1,
+  .m .sie-portfolio-2_2,
+  .m .sie-portfolio-2_3,
+  #portfolio-2 .sie-portfolio-2_1,
+  #portfolio-2 .sie-portfolio-2_2,
+  #portfolio-2 .sie-portfolio-2_3 {
+    display: none !important;
+  }
+  .m .sie-portfolio-2_4, #portfolio-2 .sie-portfolio-2_4 {
+    position: relative !important;
+    width: 220px !important;
+    height: 46px !important;
+    order: 4 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  /* 9. Testimonials Section (#testimonials) */
+  #testimonials {
+    position: relative !important;
+    background-color: #221C18 !important;
+    padding: 55px 20px 50px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  #testimonials .ss-s, #testimonials .ss-bg {
+    height: auto !important;
+    position: relative !important;
+    background: transparent !important;
+  }
+  #testimonials .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .m .sie-testimonials_1, .m .sie-testimonials_3, .m .sie-testimonials_5, .m .sie-testimonials_7, .m .sie-testimonials_9,
+  #testimonials .sie-testimonials_1, #testimonials .sie-testimonials_3, #testimonials .sie-testimonials_5, #testimonials .sie-testimonials_7, #testimonials .sie-testimonials_9 {
+    display: none !important;
+  }
+  .m .sie-testimonials_8, #testimonials .sie-testimonials_8 {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    order: 1 !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+  }
+  .m .sie-testimonials_8-text, #testimonials .sie-testimonials_8-text {
+    color: #FAF7F2 !important;
+    font-family: 'LouizeTrial-Italic', 'PromenadeItalic', serif !important;
+    font-size: clamp(16px, 4.2vw, 20px) !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    font-style: italic !important;
+    display: block !important;
+  }
+  .m .sie-testimonials_6, #testimonials .sie-testimonials_6 {
+    width: 100% !important;
+    height: auto !important;
+    order: 2 !important;
+    margin-bottom: 24px !important;
+    text-align: center !important;
+  }
+  .m .sie-testimonials_6-text, #testimonials .sie-testimonials_6-text {
+    color: var(--color-gold) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    display: block !important;
+  }
+  .m .sie-testimonials_4, #testimonials .sie-testimonials_4 {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    order: 3 !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+  }
+  .m .sie-testimonials_4-text, #testimonials .sie-testimonials_4-text {
+    color: #FAF7F2 !important;
+    font-family: 'LouizeTrial-Italic', 'PromenadeItalic', serif !important;
+    font-size: clamp(16px, 4.2vw, 20px) !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    font-style: italic !important;
+    display: block !important;
+  }
+  .m .sie-testimonials_2, #testimonials .sie-testimonials_2 {
+    width: 100% !important;
+    height: auto !important;
+    order: 4 !important;
+    margin-bottom: 28px !important;
+    text-align: center !important;
+  }
+  .m .sie-testimonials_2-text, #testimonials .sie-testimonials_2-text {
+    color: var(--color-gold) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    display: block !important;
+  }
+  .m .sie-testimonials_0, #testimonials .sie-testimonials_0 {
+    width: 250px !important;
+    height: 46px !important;
+    order: 5 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* 10. Instagram Feed (#looks) */
+  #looks {
+    position: relative !important;
+    background-color: #221C18 !important;
+    padding: 10px 10px 40px 10px !important;
+    height: auto !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+  }
+  #looks .ss-s, #looks .ss-bg {
+    height: auto !important;
+    position: relative !important;
+    background: transparent !important;
+  }
+  #looks .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .m .sie-looks_0, .m .sie-looks_1, .m .sie-looks_3, .m .sie-looks_4,
+  .m .sie-looks_5, .m .sie-looks_6, .m .sie-looks_7, .m .sie-looks_9,
+  .m .sie-looks_10, .m .sie-looks_11,
+  #looks .sie-looks_0, #looks .sie-looks_1, #looks .sie-looks_3, #looks .sie-looks_4,
+  #looks .sie-looks_5, #looks .sie-looks_6, #looks .sie-looks_7, #looks .sie-looks_9,
+  #looks .sie-looks_10, #looks .sie-looks_11 {
+    display: none !important;
+  }
+  .m .sie-looks_2, #looks .sie-looks_2 {
+    position: relative !important;
+    width: calc(50% - 6px) !important;
+    height: clamp(200px, 56vw, 260px) !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    display: block !important;
+    transform: none !important;
+  }
+  .sie-looks_2 .se-img {
+    background-image: url('../images/cintya/IMG_2356.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .m .sie-looks_8, #looks .sie-looks_8 {
+    position: relative !important;
+    width: calc(50% - 6px) !important;
+    height: clamp(200px, 56vw, 260px) !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    display: block !important;
+    transform: none !important;
+  }
+  .sie-looks_8 .se-img {
+    background-image: url('../images/cintya/IMG_4653.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* 11. Footer Section (#footer) */
+  #footer {
+    position: relative !important;
+    background-color: var(--color-bg) !important;
+    padding: 55px 20px 40px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  /* Remove old template watermark */
+  #footer, #footer .sb-i, #footer .sb-c, #footer .sb-m, #footer .ss-bg {
+    background-image: none !important;
+    background-color: var(--color-bg) !important;
+    height: auto !important;
+    position: relative !important;
+  }
+  #footer .sc {
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .m .sie-footer_0, .m .sie-footer_18,
+  #footer .sie-footer_0, #footer .sie-footer_18 {
+    display: none !important;
+  }
+  .m .sie-footer_16, #footer .sie-footer_16 {
+    width: 180px !important;
+    height: 40px !important;
+    order: 1 !important;
+    margin: 0 auto 8px auto !important;
+    display: block !important;
+  }
+  .sie-footer_16 .se-img {
+    background-image: url('../images/cintya_logo_footer.svg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .m .sie-footer_17, #footer .sie-footer_17 {
+    width: 100% !important;
+    height: auto !important;
+    order: 2 !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+  }
+  .m .sie-footer_17-text, #footer .sie-footer_17-text {
+    color: var(--color-gold) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    display: block !important;
+  }
+  .m .sie-footer_5, #footer .sie-footer_5 {
+    width: 140px !important;
+    height: 1px !important;
+    order: 3 !important;
+    margin: 0 auto 16px auto !important;
+    background-color: var(--color-gold) !important;
+    opacity: 0.35 !important;
+  }
+  .m .sie-footer_4, #footer .sie-footer_4 {
+    width: 100% !important;
+    max-width: 340px !important;
+    height: auto !important;
+    order: 4 !important;
+    margin: 0 auto 24px auto !important;
+    text-align: center !important;
+  }
+  .m .sie-footer_4-text, #footer .sie-footer_4-text {
+    color: var(--color-mocha) !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.75 !important;
+    text-align: center !important;
+    opacity: 0.9 !important;
+    display: block !important;
+  }
+  .m .sie-footer_11, .m .sie-footer_10, .m .sie-footer_9,
+  .m .sie-footer_8, .m .sie-footer_19, .m .sie-footer_7, .m .sie-footer_6,
+  #footer .sie-footer_11, #footer .sie-footer_10, #footer .sie-footer_9,
+  #footer .sie-footer_8, #footer .sie-footer_19, #footer .sie-footer_7, #footer .sie-footer_6 {
+    width: 100% !important;
+    height: auto !important;
+    order: 5 !important;
+    margin: 0 auto 7px auto !important;
+    text-align: center !important;
+  }
+  #footer nav, #footer a .se-t {
+    color: var(--color-graphite) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-weight: 500 !important;
+    display: block !important;
+  }
+  #footer a:hover nav, #footer a:hover .se-t {
+    color: var(--color-gold) !important;
+  }
+
+  /* Social Icons: Horizontal Flex Row */
+  .cintya-footer-social-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    order: 6 !important;
+    width: 100% !important;
+    margin: 14px auto 10px auto !important;
+  }
+  .m .sie-footer_12, .m .sie-footer_13, .m .sie-footer_14, .m .sie-footer_15,
+  #footer .sie-footer_12, #footer .sie-footer_13, #footer .sie-footer_14, #footer .sie-footer_15 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 !important;
+  }
+  #footer .se-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    fill: var(--color-mocha) !important;
+    transition: fill 0.2s ease !important;
+  }
+  #footer .se-icon:hover svg {
+    fill: var(--color-gold) !important;
+  }
+
+  .m .sie-footer_1, #footer .sie-footer_1 {
+    width: 28px !important;
+    height: 28px !important;
+    order: 7 !important;
+    margin: 16px auto 14px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .sie-footer_1 svg {
+    width: 20px !important;
+    height: 20px !important;
+    fill: var(--color-gold) !important;
+  }
+
+  .m .sie-footer_3, #footer .sie-footer_3 {
+    width: 100% !important;
+    height: auto !important;
+    order: 8 !important;
+    margin: 0 auto 6px auto !important;
+    text-align: center !important;
+  }
+  .m .sie-footer_3-text, #footer .sie-footer_3-text {
+    color: var(--color-mocha) !important;
+    font-size: 11px !important;
+    text-align: center !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    opacity: 0.8 !important;
+    display: block !important;
+  }
+
+  .m .sie-footer_2, #footer .sie-footer_2 {
+    width: 100% !important;
+    height: auto !important;
+    order: 9 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  .m .sie-footer_2-text, #footer .sie-footer_2-text {
+    color: var(--color-mocha) !important;
+    font-size: 10px !important;
+    text-align: center !important;
+    letter-spacing: 0.08em !important;
+    opacity: 0.6 !important;
+    display: block !important;
+  }
+}
+
+/* Ensure footer social row has no effect on desktop layout */
+@media (min-width: 769px) {
+  .cintya-footer-social-row {
+    display: contents !important;
+  }
+}
+
+/* Desktop Lookbook Styling (>= 769px) */
+@media (min-width: 769px) {
+  .sie-portfolio-2_3 {
+    overflow: hidden !important;
+    border-radius: 4px !important;
+    box-shadow: 0 15px 45px rgba(30, 27, 24, 0.3) !important;
+    z-index: 2 !important;
+  }
+
+  .sie-portfolio-2_3 .se-img {
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+    filter: brightness(0.6) contrast(1.1) !important;
+  }
+
+  .sie-portfolio-2_3::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(25, 21, 18, 0.45) 0%, rgba(25, 21, 18, 0.88) 100%) !important;
+    pointer-events: none;
+  }
+
+  .sie-portfolio-2_6 {
+    z-index: 10 !important;
+    overflow: visible !important;
+  }
+
+  .sie-portfolio-2_6-text {
+    color: #FAF7F2 !important;
+    font-family: 'PromenadeRegular', serif !important;
+    font-size: 76px !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.02em !important;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.6) !important;
+    overflow: visible !important;
+  }
+
+  .sie-portfolio-2_5 {
+    z-index: 10 !important;
+    overflow: visible !important;
+  }
+
+  .sie-portfolio-2_5-text {
+    color: #F5EFEB !important;
+    font-family: 'Libre Franklin', 'Hind', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
+    overflow: visible !important;
+  }
+
+  .sie-portfolio-2_4 {
+    z-index: 10 !important;
+  }
+}
+/* Widescreen Optimization for Lookbook to prevent gaps */
+@media (min-width: 1280px) {
+  #portfolio-2 {
+    overflow: hidden !important;
+    position: relative !important;
+  }
+}
+
+
+
+/* =========================================================
+   BUG FIXES: WHATSAPP BUTTON, SIDEBAR STICKY & INSTAGRAM FEED
+   ========================================================= */
+
+/* Eliminate unstyled WhatsApp SVG arc */
+.cintya-whatsapp-float {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Polished Green Floating WhatsApp Button */
+.cintya-floating-wa {
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px !important;
+  width: 58px !important;
+  height: 58px !important;
+  max-width: 58px !important;
+  max-height: 58px !important;
+  border-radius: 50% !important;
+  background: #25D366 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45) !important;
+  z-index: 99999 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+}
+.cintya-floating-wa:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6) !important;
+}
+.cintya-floating-wa svg {
+  width: 32px !important;
+  height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  fill: #ffffff !important;
+}
+
+/* Ensure Meet, Contact, Badges, Portfolio-2, Testimonials, Looks, and Footer have high z-index and solid background */
+#meet, #contact, #badges, #portfolio-2, #testimonials, #looks, #footer {
+  position: relative !important;
+  z-index: 10 !important;
+  background-color: var(--color-bg) !important;
+}
+
+/* Force authentic Cintya photos on Instagram Feed (#looks) - blocks Showit ezgif overrides */
+.sie-looks_0 .se-img { background-image: url('../images/cintya/IMG_0230.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_1 .se-img { background-image: url('../images/cintya/IMG_0661.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_2 .se-img { background-image: url('../images/cintya/IMG_2356.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_3 .se-img { background-image: url('../images/cintya/IMG_3004.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_4 .se-img { background-image: url('../images/cintya/IMG_3541.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_5 .se-img { background-image: url('../images/cintya/IMG_4338.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_6 .se-img { background-image: url('../images/cintya/IMG_4381.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_7 .se-img { background-image: url('../images/cintya/IMG_4501.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_8 .se-img { background-image: url('../images/cintya/IMG_4653.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_9 .se-img { background-image: url('../images/cintya/IMG_6470.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_10 .se-img { background-image: url('../images/cintya/IMG_7017.jpg') !important; background-size: cover !important; background-position: center !important; }
+.sie-looks_11 .se-img { background-image: url('../images/cintya/IMG_7555.jpg') !important; background-size: cover !important; background-position: center !important; }
+
+/* Force authentic Cintya photo on portfolio-1_2 (Horizontal Glam) */
+.sie-portfolio-1_2 .se-img {
+  background-image: url('../images/cintya/IMG_0661.jpg') !important;
+  background-size: cover !important;
+  background-position: center 30% !important;
+}
+
+/* =========================================================
+   TEXT OPACITY & HIGH-CONTRAST READABILITY FIXES (ALL SECTIONS)
+   ========================================================= */
+
+/* 1. Global text readability on light background */
+.sp, .sb, .sc, .ss-bg {
+  color: var(--color-graphite);
+}
+
+/* 2. Footer: 100% visible, high-contrast, perfectly crisp */
+#footer {
+  background-color: var(--color-bg) !important;
+  color: var(--color-graphite) !important;
+  border-top: 1px solid rgba(200, 162, 97, 0.25) !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+#footer * {
+  opacity: 1 !important;
+}
+
+#footer .se-t, 
+#footer p, 
+#footer a, 
+#footer h1, 
+#footer h2, 
+#footer h3, 
+#footer span,
+.sie-footer_0-text, 
+.sie-footer_2-text, 
+.sie-footer_3-text, 
+.sie-footer_4-text,
+.sie-footer_6-text, 
+.sie-footer_7-text, 
+.sie-footer_8-text, 
+.sie-footer_9-text,
+.sie-footer_10-text, 
+.sie-footer_11-text, 
+.sie-footer_17-text, 
+.sie-footer_18-text, 
+.sie-footer_19-text {
+  color: var(--color-graphite) !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+.sie-footer_4-text {
+  color: var(--color-mocha) !important;
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+}
+
+.sie-footer_17-text {
+  color: var(--color-gold) !important;
+  font-size: 12px !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+}
+
+.sie-footer_18-text {
+  color: var(--color-graphite) !important;
+  font-size: 14px !important;
+  letter-spacing: 0.2em !important;
+}
+
+.sie-footer_2-text, .sie-footer_3-text {
+  color: var(--color-mocha) !important;
+  font-size: 12px !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+#footer a:hover, #footer a:hover * {
+  color: var(--color-gold) !important;
+  transition: color 0.25s ease;
+}
+
+#footer svg {
+  fill: var(--color-mocha) !important;
+  opacity: 1 !important;
+  transition: fill 0.25s ease;
+}
+
+#footer a:hover svg {
+  fill: var(--color-gold) !important;
+}
+
+.sie-footer_1 svg {
+  fill: var(--color-gold) !important;
+}
+
+.sie-footer_5 svg, .sie-footer_5 line {
+  stroke: var(--color-gold) !important;
+  fill: none !important;
+  opacity: 0.7 !important;
+}
+
+/* 3. Services, Meet, Contact, Testimonials contrast guarantees */
+#services .se-t, #services p, #services h2, #services h3 {
+  color: var(--color-graphite) !important;
+  opacity: 1 !important;
+}
+.sie-services_5-text {
+  color: var(--color-gold) !important;
+  letter-spacing: 0.15em !important;
+}
+
+#meet .se-t, #meet p, #meet h2 {
+  color: var(--color-graphite) !important;
+  opacity: 1 !important;
+}
+
+#contact .se-t, #contact p, #contact h2 {
+  color: var(--color-graphite) !important;
+  opacity: 1 !important;
+}
+.sie-contact_4-text {
+  color: var(--color-gold) !important;
+}
+
+/* 3.1 Testimonials: High-Contrast Ivory & Gold on Dark Luxury Canvas */
+#testimonials {
+  background-color: #221C18 !important;
+  position: relative !important;
+  z-index: 10 !important;
+  overflow: hidden !important;
+}
+#testimonials .ss-bg,
+#testimonials .ss-s {
+  background-color: #221C18 !important;
+}
+#testimonials .se-t, 
+#testimonials h1, 
+#testimonials h2, 
+#testimonials h3, 
+#testimonials p,
+.sie-testimonials_4-text,
+.sie-testimonials_8-text {
+  color: #FAF7F2 !important; /* Pure radiant ivory */
+  opacity: 1 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+}
+.sie-testimonials_2-text, 
+.sie-testimonials_6-text {
+  color: #C8A261 !important; /* Imperial Gold */
+  opacity: 1 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+}
+.sie-testimonials_1 svg,
+.sie-testimonials_3 svg,
+.sie-testimonials_5 svg,
+.sie-testimonials_7 svg,
+.sie-testimonials_9 svg,
+.sie-testimonials_1 line,
+.sie-testimonials_3 line,
+.sie-testimonials_5 line,
+.sie-testimonials_7 line,
+.sie-testimonials_9 line {
+  stroke: #C8A261 !important;
+  opacity: 0.85 !important;
+}
+#testimonials .st-secondary {
+  background-color: #C8A261 !important;
+  border: 1px solid #C8A261 !important;
+}
+#testimonials .st-secondary span {
+  color: #221C18 !important;
+  font-weight: 600 !important;
+}
+#testimonials .st-secondary:hover {
+  background-color: #FAF7F2 !important;
+  border-color: #FAF7F2 !important;
+}
+#testimonials .st-secondary:hover span {
+  color: #221C18 !important;
+}
+
+/* 4. Navigation contrast */
+#menu a, #menu .se-t, #menu nav, #menu h2 {
+  color: var(--color-graphite) !important;
+  opacity: 1 !important;
+}
+#menu a:hover, #menu a:hover * {
+  color: var(--color-gold) !important;
+}
+
+/* 5. Mobile Nav Drawer: light text on dark background */
+#mobile-nav .se-t, #mobile-nav a, #mobile-nav nav {
+  color: #FAF7F2 !important;
+  opacity: 1 !important;
+}
+#mobile-nav svg {
+  fill: var(--color-gold) !important;
+  opacity: 1 !important;
+}
+#mobile-nav a:hover, #mobile-nav a:hover * {
+  color: var(--color-gold) !important;
+}
+
+/* =========================================================
+   6. WIDESCREEN ALIGNMENT & CENTERING GUARANTEES (1200px - 1920px)
+   ========================================================= */
+@media (min-width: 1200px) {
+  /* Enforce consistent 1200px canvas centering across wide desktop monitors */
+  .sc {
+    width: 1200px !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+  }
+
+  /* Sticky Nav Container */
+  #menu .sc {
+    width: 1200px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+  }
+  #menu .sie-menu_1 {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    height: 32px !important;
+    width: 220px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10 !important;
+  }
+  #menu .sie-menu_1 img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  /* Second Fold: Strict 2-column balanced coordinates */
+  #portfolio-1 .sc {
+    width: 1200px !important;
+    max-width: 1200px !important;
+    min-height: 560px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+  }
+
+  /* Footer: Centered 1200px bounds preventing monitor edge drift */
+  #footer .sc {
+    width: 1200px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+  }
+
+  /* All content section canvases centered */
+  #services .sc,
+  #meet .sc,
+  #contact .sc,
+  #badges .sc,
+  #testimonials .sc,
+  #looks .sc {
+    width: 1200px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+  }
+}
+
+
+
+
+/* =========================================================
+   MOBILE NAVIGATION DRAWER OVERHAUL (CLEAN LUXURY NO TEMPLATE)
+   ========================================================= */
+#mobile-nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  background-color: #1A1613 !important;
+  background-image: none !important;
+  overflow-y: auto !important;
+}
+
+#mobile-nav.is-open {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#mobile-nav, #mobile-nav .ss-bg, #mobile-nav .ss-s, #mobile-nav .sb-m {
+  background-image: none !important;
+  background-color: #1A1613 !important;
+}
+
+#mobile-nav .sc {
+  width: 100% !important;
+  max-width: 480px !important;
+  height: 100% !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 80px 20px 40px 20px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  transform: none !important;
+}
+
+/* Close button top right */
+.sie-mobile-nav_12, [data-sid="mobile-nav_12"] {
+  position: fixed !important;
+  top: 18px !important;
+  right: 20px !important;
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 100000 !important;
+  cursor: pointer !important;
+  background: rgba(200, 162, 97, 0.2) !important;
+  border: 1px solid rgba(200, 162, 97, 0.4) !important;
+  border-radius: 50% !important;
+  transform: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.25s ease !important;
+}
+.sie-mobile-nav_12:hover, .sie-mobile-nav_12:active {
+  background: rgba(200, 162, 97, 0.35) !important;
+  transform: scale(1.08) !important;
+}
+.sie-mobile-nav_12 svg {
+  width: 22px !important;
+  height: 22px !important;
+  fill: #D4AF37 !important;
+}
+
+/* Logo top left */
+.sie-mobile-nav_11, [data-sid="mobile-nav_11"] {
+  position: fixed !important;
+  top: 20px !important;
+  left: 20px !important;
+  height: 40px !important;
+  width: 170px !important;
+  z-index: 100000 !important;
+  transform: none !important;
+}
+.sie-mobile-nav_11 .se-img {
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url('../images/cintya_nunes_logo_white.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+}
+
+/* Menu links inside mobile nav */
+#mobile-nav .se:not(.sie-mobile-nav_11):not(.sie-mobile-nav_12):not(.sie-mobile-nav_0):not(.sie-mobile-nav_1):not(.sie-mobile-nav_2):not(.sie-mobile-nav_3):not(.sie-mobile-nav_4) {
+  position: relative !important;
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 6px auto !important;
+  text-align: center !important;
+}
+
+/* Link ordering */
+.sie-mobile-nav_5 { order: 1 !important; }
+.sie-mobile-nav_8 { order: 2 !important; }
+.sie-mobile-nav_9 { order: 3 !important; }
+.sie-mobile-nav_7 { order: 4 !important; }
+.sie-mobile-nav_6 { order: 5 !important; }
+.sie-mobile-nav_13 { order: 6 !important; }
+.sie-mobile-nav_10 { order: 7 !important; }
+
+#mobile-nav a .se-t {
+  color: #FAF7F2 !important;
+  font-family: 'PromenadeRegular', serif !important;
+  font-size: clamp(24px, 5.5vw, 32px) !important;
+  letter-spacing: 0.06em !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  transition: color 0.25s ease, transform 0.25s ease !important;
+  display: block !important;
+}
+
+#mobile-nav a:hover .se-t,
+#mobile-nav a:active .se-t {
+  color: #D4AF37 !important;
+  transform: scale(1.05);
+}
+
+/* Social icons at bottom of mobile nav */
+.cintya-mobile-nav-socials {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-top: 32px !important;
+  order: 99 !important;
+  width: 100% !important;
+}
+
+.sie-mobile-nav_1, .sie-mobile-nav_2, .sie-mobile-nav_3, .sie-mobile-nav_4 {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 42px !important;
+  height: 42px !important;
+  margin: 0 !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(200, 162, 97, 0.3) !important;
+  border-radius: 50% !important;
+  transition: all 0.25s ease !important;
+}
+.sie-mobile-nav_1:hover, .sie-mobile-nav_2:hover, .sie-mobile-nav_3:hover, .sie-mobile-nav_4:hover {
+  background: rgba(200, 162, 97, 0.25) !important;
+  border-color: #D4AF37 !important;
+  transform: translateY(-2px) scale(1.08) !important;
+}
+.sie-mobile-nav_1 svg, .sie-mobile-nav_2 svg, .sie-mobile-nav_3 svg, .sie-mobile-nav_4 svg {
+  fill: #D4AF37 !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* =========================================================
+   LUXURY BRIDAL BOOKING FORM (#form / .galya-custom-form)
+   ========================================================= */
+
+/* Desktop & General Structure */
+.d #form.sib-form,
+.d .sib-form {
+  height: auto !important;
+  min-height: 850px !important;
+  padding: 60px 0 80px !important;
+  box-sizing: border-box !important;
+}
+
+.d .sib-form .sc {
+  height: auto !important;
+  position: relative !important;
+}
+
+.d .sie-form_0 {
+  position: static !important;
+  margin: 180px auto 40px !important;
+  width: 760px !important;
+  max-width: 95% !important;
+  height: auto !important;
+}
+
+.d .sie-form_0 .si-embed {
+  transform: none !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Mobile Structure: eliminate 2685px dead space */
+.m #form.sib-form,
+.m .sib-form {
+  height: auto !important;
+  min-height: auto !important;
+  padding: 40px 15px 50px !important;
+  box-sizing: border-box !important;
+}
+
+.m .sib-form .sc {
+  height: auto !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.m .sie-form_2,
+.m .sie-form_1,
+.m .sie-form_6,
+.m .sie-form_8,
+.m .sie-form_0 {
+  position: static !important;
+  transform: none !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.m .sie-form_3,
+.m .sie-form_4,
+.m .sie-form_5,
+.m .sie-form_7,
+.m .sie-form_9 {
+  display: none !important;
+}
+
+.m .sie-form_2 {
+  margin-bottom: 12px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+.m .sie-form_1 {
+  margin-bottom: 6px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+.m .sie-form_6 {
+  margin-bottom: 6px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+.m .sie-form_8 {
+  margin-bottom: 24px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.m .sie-form_0 {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.m .sie-form_0 .si-embed {
+  transform: none !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Custom Form Card Styling */
+.galya-custom-form {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(200, 162, 97, 0.4) !important;
+  box-shadow: 0 10px 35px rgba(34, 28, 24, 0.07) !important;
+  border-radius: 4px !important;
+  padding: 36px 32px !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+.galya-custom-form h3 {
+  font-family: 'PromenadeRegular', serif !important;
+  font-size: 26px !important;
+  color: #221C18 !important;
+  margin: 0 0 8px 0 !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+}
+
+.galya-custom-form p.sub {
+  font-family: 'Libre Franklin', sans-serif !important;
+  font-size: 13px !important;
+  color: #7A685D !important;
+  margin: 0 0 28px 0 !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+}
+
+.galya-form-row {
+  display: flex !important;
+  gap: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.galya-form-group {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 16px !important;
+}
+
+.galya-form-row .galya-form-group {
+  margin-bottom: 0 !important;
+}
+
+.galya-form-group label {
+  font-family: 'Hind', sans-serif !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 600 !important;
+  color: #3A3029 !important;
+  margin-bottom: 6px !important;
+}
+
+.galya-form-group input,
+.galya-form-group select,
+.galya-form-group textarea {
+  width: 100% !important;
+  padding: 12px 14px !important;
+  background-color: #FAF7F2 !important;
+  border: 1px solid rgba(200, 162, 97, 0.45) !important;
+  border-radius: 2px !important;
+  font-family: 'Libre Franklin', sans-serif !important;
+  font-size: 14px !important;
+  color: #221C18 !important;
+  outline: none !important;
+  transition: all 0.25s ease !important;
+  box-sizing: border-box !important;
+}
+
+.galya-form-group input::placeholder,
+.galya-form-group textarea::placeholder {
+  color: #A3968C !important;
+  font-size: 13px !important;
+}
+
+.galya-form-group input:focus,
+.galya-form-group select:focus,
+.galya-form-group textarea:focus {
+  background-color: #FFFFFF !important;
+  border-color: #C8A261 !important;
+  box-shadow: 0 0 0 3px rgba(200, 162, 97, 0.2) !important;
+}
+
+.galya-form-group select {
+  cursor: pointer !important;
+}
+
+.galya-form-submit {
+  width: 100% !important;
+  margin-top: 12px !important;
+  padding: 16px 28px !important;
+  background-color: #221C18 !important;
+  color: #FAF7F2 !important;
+  border: 1px solid #C8A261 !important;
+  border-radius: 2px !important;
+  font-family: 'Hind', sans-serif !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(34, 28, 24, 0.15) !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+.galya-form-submit:hover {
+  background-color: #C8A261 !important;
+  color: #221C18 !important;
+  border-color: #C8A261 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(200, 162, 97, 0.3) !important;
+}
+
+.galya-form-success {
+  display: none;
+  text-align: center !important;
+  padding: 24px !important;
+  background-color: #FAF7F2 !important;
+  border: 1px solid #C8A261 !important;
+  border-radius: 4px !important;
+}
+
+.galya-form-success h4 {
+  font-family: 'PromenadeRegular', serif !important;
+  font-size: 22px !important;
+  color: #221C18 !important;
+  margin: 0 0 8px 0 !important;
+}
+
+.galya-form-success p {
+  font-family: 'Libre Franklin', sans-serif !important;
+  font-size: 14px !important;
+  color: #5C4A3E !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .galya-custom-form {
+    padding: 24px 18px !important;
+  }
+  .galya-custom-form h3 {
+    font-size: 21px !important;
+  }
+  .galya-form-row {
+    flex-direction: column !important;
+    gap: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .galya-form-row .galya-form-group {
+    margin-bottom: 16px !important;
+  }
+}
+
+/* =========================================================
+   DESKTOP MEET / ABOUT CINTYA SECTION REFINEMENTS
+   ========================================================= */
+@media (min-width: 769px) {
+  /* 1. Completely hide old template cutout woman and SVG arch */
+  .d .sie-meet_2,
+  .d .sie-meet_3,
+  #meet .sie-meet_2,
+  #meet .sie-meet_3 {
+    display: none !important;
+  }
+
+  /* 2. Pristine Circular Portrait of Cintya Nunes with Luxury Gold Ring */
+  .d .sie-meet_1,
+  #meet .sie-meet_1 {
+    left: 350px !important;
+    top: 215px !important;
+    width: 380px !important;
+    height: 380px !important;
+    border-radius: 50% !important;
+    border: 4px solid var(--color-gold) !important;
+    box-shadow: 0 20px 50px rgba(30, 27, 24, 0.28) !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+  }
+
+  .d .sie-meet_1:hover,
+  #meet .sie-meet_1:hover {
+    transform: scale(1.025) !important;
+    box-shadow: 0 26px 60px rgba(200, 162, 97, 0.35) !important;
+  }
+
+  .d .sie-meet_1 .se-img,
+  #meet .sie-meet_1 .se-img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    background-image: url('../images/cintya_avatar_hq.png') !important;
+    background-size: cover !important;
+    background-position: center 15% !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 3. Left Editorial Column Typography */
+  .d .sie-meet_6,
+  #meet .sie-meet_6 {
+    left: 50px !important;
+    top: 200px !important;
+    width: 275px !important;
+    z-index: 12 !important;
+  }
+  .d .sie-meet_6-text,
+  #meet .sie-meet_6-text {
+    font-size: 14.5px !important;
+    line-height: 1.85 !important;
+    color: #5C4A3E !important;
+    opacity: 1 !important;
+    font-family: 'Libre Franklin', sans-serif !important;
+  }
+
+  .d .sie-meet_5,
+  #meet .sie-meet_5 {
+    left: 50px !important;
+    top: 440px !important;
+    width: 285px !important;
+    z-index: 12 !important;
+  }
+  .d .sie-meet_5-text,
+  #meet .sie-meet_5-text {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    color: #1E1B18 !important;
+    opacity: 1 !important;
+    font-family: 'LouizeTrial-Italic', 'PromenadeItalic', serif !important;
+    font-style: italic !important;
+  }
+
+  .d .sie-meet_4,
+  #meet .sie-meet_4 {
+    left: 50px !important;
+    top: 570px !important;
+    width: 240px !important;
+    z-index: 12 !important;
+  }
+}
+
+
+

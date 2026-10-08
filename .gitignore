@@ -1,0 +1,32 @@
+﻿# Dependencies
+node_modules/
+
+# Local server logs & tunnel info
+tunnel.txt
+tunnel_url.txt
+public_url.txt
+run_lhr.js
+start_tunnel.js
+*.log
+
+# Scratch scripts & temp files
+convert_images.py
+inspect_images.py
+snap_tool.py
+test_overflow.py
+test_circle.png
+test_hind.png
+__pycache__/
+*.pyc
+
+# Test screenshots
+screenshots/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE config
+.vscode/
+.idea/

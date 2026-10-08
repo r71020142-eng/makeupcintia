@@ -1,0 +1,24 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <style>
+    .monogram-char {
+      font-family: 'Playfair Display', 'Didot', serif;
+      font-size: 320px;
+      font-style: italic;
+      fill: none;
+      stroke: #C8A261;
+      stroke-width: 4;
+      opacity: 0.18;
+    }
+    .monogram-circle {
+      fill: none;
+      stroke: #C8A261;
+      stroke-width: 2;
+      opacity: 0.12;
+      stroke-dasharray: 8 6;
+    }
+  </style>
+  <circle cx="300" cy="300" r="260" class="monogram-circle" />
+  <circle cx="300" cy="300" r="275" class="monogram-circle" />
+  <text x="220" y="380" class="monogram-char">C</text>
+  <text x="310" y="420" class="monogram-char">N</text>
+</svg>

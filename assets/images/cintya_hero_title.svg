@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 160" width="100%" height="100%">
+  <style>
+    .hero-text {
+      font-family: 'Playfair Display', 'Bodoni MT', 'Cinzel', serif;
+      font-size: 82px;
+      font-weight: 400;
+      letter-spacing: 16px;
+      fill: #FFFFFF;
+      text-anchor: middle;
+      filter: drop-shadow(0 4px 18px rgba(0,0,0,0.35));
+    }
+  </style>
+  <text x="600" y="110" class="hero-text">CINTYA NUNES</text>
+</svg>

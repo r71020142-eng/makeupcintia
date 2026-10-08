@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGradW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D8A7"/>
+      <stop offset="50%" stop-color="#DFBA75"/>
+      <stop offset="100%" stop-color="#C8A261"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Monograma CN -->
+  <g transform="translate(12, 10)">
+    <circle cx="35" cy="35" r="32" fill="none" stroke="url(#goldGradW)" stroke-width="1.2" stroke-dasharray="190 10"/>
+    <circle cx="35" cy="35" r="28" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.4"/>
+    
+    <text x="24" y="44" font-family="'Cinzel', 'Playfair Display', 'Didot', 'Georgia', serif" font-size="29" font-style="italic" fill="url(#goldGradW)" font-weight="400">C</text>
+    <text x="35" y="46" font-family="'Cinzel', 'Playfair Display', 'Didot', 'Georgia', serif" font-size="28" fill="#FAF7F2" font-weight="500">N</text>
+    <circle cx="35" cy="18" r="1.5" fill="url(#goldGradW)"/>
+  </g>
+
+  <!-- Tipografia Principal CINTYA NUNES -->
+  <g transform="translate(97, 12)">
+    <text x="0" y="34" font-family="'Playfair Display', 'Cinzel', 'Didot', 'Times New Roman', serif" font-size="26" letter-spacing="4.5" fill="#FAF7F2" font-weight="500">CINTYA NUNES</text>
+    <line x1="2" y1="44" x2="352" y2="44" stroke="url(#goldGradW)" stroke-width="1"/>
+    <text x="2" y="58" font-family="'Montserrat', 'Libre Franklin', 'Helvetica Neue', sans-serif" font-size="8.5" letter-spacing="4" fill="#E2D1C3" font-weight="400">MAKEUP ARTIST &amp; HAIRSTYLES</text>
+  </g>
+</svg>
