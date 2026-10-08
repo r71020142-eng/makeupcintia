@@ -273,30 +273,36 @@ body {
 /* Lookbook Continuous Marquee */
 .lookbook-marquee-wrapper {
   overflow: hidden;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
 }
 
 .lookbook-marquee-track {
   display: flex;
+  flex-shrink: 0;
   width: max-content;
-  animation: marquee 35s linear infinite;
-}
-
-.lookbook-marquee-track:hover {
-  animation-play-state: paused;
+  animation: marquee 38s linear infinite;
+  will-change: transform;
 }
 
 .lookbook-marquee-track-reverse {
   display: flex;
+  flex-shrink: 0;
   width: max-content;
-  animation: marquee-reverse 35s linear infinite;
+  animation: marquee-reverse 34s linear infinite;
+  will-change: transform;
 }
 
-.lookbook-marquee-track-reverse:hover {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .lookbook-marquee-track:hover,
+  .lookbook-marquee-track-reverse:hover {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes marquee {
@@ -311,11 +317,14 @@ body {
 
 .lookbook-item {
   flex-shrink: 0;
-  margin-right: 18px;
-  border-radius: 4px;
+  width: 130px;
+  height: 160px;
+  margin-right: 14px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #EFE9E1;
+  transition: transform 0.3s ease;
 }
 
 .lookbook-item:hover {
@@ -323,10 +332,19 @@ body {
 }
 
 .lookbook-item img {
+  width: 100%;
   height: 100%;
-  width: auto;
   object-fit: cover;
+  object-position: center 25%;
   display: block;
+}
+
+@media (min-width: 769px) {
+  .lookbook-item {
+    width: 180px;
+    height: 240px;
+    margin-right: 18px;
+  }
 }
 
 /* WhatsApp Pre-booking Form */
@@ -767,19 +785,27 @@ body {
     width: 100% !important;
     overflow: hidden !important;
   }
-  #hero .ss-s, #hero .ss-bg {
+  #hero, .m #hero, .sib-hero {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .m #hero .ss-s, #hero .ss-s,
+  .m #hero .ss-bg, #hero .ss-bg {
     height: 100% !important;
+    min-height: 100% !important;
     width: 100% !important;
     position: absolute !important;
     inset: 0 !important;
   }
-  #hero .sc {
+  .m #hero .sc, #hero .sc, .sib-hero .sc {
     width: 100% !important;
-    max-width: 480px !important;
+    max-width: 100% !important;
     height: 100% !important;
-    position: relative !important;
-    margin: 0 auto !important;
-    padding: 0 20px !important;
+    min-height: 100% !important;
+    position: absolute !important;
+    inset: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   .m .sie-hero_0, #hero .sie-hero_0 {
     position: absolute !important;
@@ -795,22 +821,40 @@ body {
     width: 100% !important;
     height: 100% !important;
   }
-  .sie-hero_3, .sie-hero_1, #hero .sie-hero_1 {
+  .sie-hero_3, .sie-hero_1, #hero .sie-hero_1, .m .sie-hero_1 {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
   }
-  .m .sie-hero_4, #hero .sie-hero_4 {
+  .m .sie-hero_4, #hero .sie-hero_4, .sie-hero_4 {
     position: absolute !important;
+    top: auto !important;
+    bottom: 0 !important;
     left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
+    height: 380px !important;
+    min-height: 52% !important;
+    max-height: 100% !important;
     z-index: 2 !important;
     pointer-events: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    background: linear-gradient(
+      to top,
+      rgba(20, 16, 14, 0.98) 0%,
+      rgba(20, 16, 14, 0.90) 30%,
+      rgba(20, 16, 14, 0.65) 60%,
+      rgba(20, 16, 14, 0.20) 85%,
+      rgba(20, 16, 14, 0) 100%
+    ) !important;
   }
-  .m .sie-hero_4, #hero .sie-hero_4 {
-    bottom: 0 !important;
-    height: 280px !important;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(20,16,14,0.88) 100%) !important;
+  .m .sie-hero_4 .se-simple, #hero .sie-hero_4 .se-simple, .sie-hero_4 .se-simple {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: inherit !important;
   }
   .m .sie-hero_2, #hero .sie-hero_2 {
     position: absolute !important;
@@ -821,19 +865,21 @@ body {
     height: 75px !important;
     z-index: 3 !important;
   }
-  .m .sie-hero_15, #hero .sie-hero_15 {
+  .m .sie-hero_15, #hero .sie-hero_15, .sie-hero_15 {
     position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    bottom: 50px !important;
-    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
+    bottom: 48px !important;
+    top: auto !important;
+    transform: none !important;
     text-align: center !important;
-    z-index: 3 !important;
+    z-index: 5 !important;
+    margin: 0 !important;
   }
-  .m .sie-hero_15-text, #hero .sie-hero_15-text {
+  .m .sie-hero_15-text, #hero .sie-hero_15-text, .sie-hero_15-text {
     color: #FAF7F2 !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
     font-size: 11px !important;
     letter-spacing: 0.18em !important;
     text-transform: uppercase !important;
@@ -841,19 +887,21 @@ body {
     font-weight: 600 !important;
     display: block !important;
   }
-  .m .sie-hero_16, #hero .sie-hero_16 {
+  .m .sie-hero_16, #hero .sie-hero_16, .sie-hero_16 {
     position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    bottom: 24px !important;
-    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
+    bottom: 20px !important;
+    top: auto !important;
+    transform: none !important;
     text-align: center !important;
-    z-index: 3 !important;
+    z-index: 5 !important;
+    margin: 0 !important;
   }
-  .m .sie-hero_16-text, #hero .sie-hero_16-text {
+  .m .sie-hero_16-text, #hero .sie-hero_16-text, .sie-hero_16-text {
     color: var(--color-gold) !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
     font-size: 13px !important;
     letter-spacing: 0.22em !important;
     text-transform: uppercase !important;
@@ -1415,30 +1463,52 @@ body {
     opacity: 0.9 !important;
     display: block !important;
   }
+  /* ESTEIRA 1 (DE CIMA) */
   .m .sie-portfolio-2_0,
   #portfolio-2 .sie-portfolio-2_0 {
     position: relative !important;
+    display: block !important;
+    visibility: visible !important;
     width: 100vw !important;
-    height: 190px !important;
+    height: 165px !important;
     order: 3 !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 12px !important;
     transform: none !important;
     top: auto !important;
     left: auto !important;
+    overflow: hidden !important;
   }
+
+  /* ESTEIRA 2 (DE BAIXO) */
   .m .sie-portfolio-2_1,
+  #portfolio-2 .sie-portfolio-2_1 {
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    width: 100vw !important;
+    height: 165px !important;
+    order: 4 !important;
+    margin-bottom: 26px !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    overflow: hidden !important;
+  }
+
+  /* Ocultar elementos estaticos do desktop */
   .m .sie-portfolio-2_2,
   .m .sie-portfolio-2_3,
-  #portfolio-2 .sie-portfolio-2_1,
   #portfolio-2 .sie-portfolio-2_2,
   #portfolio-2 .sie-portfolio-2_3 {
     display: none !important;
   }
+
+  /* Botao CTA Lookbook */
   .m .sie-portfolio-2_4, #portfolio-2 .sie-portfolio-2_4 {
     position: relative !important;
     width: 220px !important;
     height: 46px !important;
-    order: 4 !important;
+    order: 5 !important;
     margin: 0 auto !important;
     display: flex !important;
     justify-content: center !important;

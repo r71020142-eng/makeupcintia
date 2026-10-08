@@ -66,49 +66,78 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // 6. Lookbook Continuous Sliding Marquee
+  const LOOKBOOK_FALLBACK_IMAGES = [
+    'assets/images/cintya/IMG_4381.jpg',
+    'assets/images/cintya/IMG_4653.jpg',
+    'assets/images/cintya/IMG_3541.jpg',
+    'assets/images/cintya/IMG_3004.jpg',
+    'assets/images/cintya/IMG_2356.jpg',
+    'assets/images/cintya/IMG_0661.jpg',
+    'assets/images/cintya/IMG_4338.jpg',
+    'assets/images/cintya/IMG_6470.jpg',
+    'assets/images/cintya/IMG_7555.jpg',
+    'assets/images/cintya/IMG_7680.jpg',
+    'assets/images/cintya/IMG_0230.jpg',
+    'assets/images/cintya/IMG_4501.jpg',
+    'assets/images/cintya/IMG_7017.jpg'
+  ];
+
   function setupMarquee(gallerySelector, reverse, speed) {
-    const gallery = document.querySelector(gallerySelector);
-    if (!gallery) return;
+    const galleries = document.querySelectorAll(gallerySelector);
+    if (!galleries || !galleries.length) return;
 
-    const noscripts = gallery.querySelectorAll('noscript');
-    if (!noscripts.length) return;
-
-    const imgSources = [];
-    noscripts.forEach(ns => {
-      const match = ns.innerHTML.match(/src="([^"]+)"/);
-      if (match && match[1]) {
-        imgSources.push(match[1]);
+    galleries.forEach(gallery => {
+      let imgSources = [];
+      const noscripts = gallery.querySelectorAll('noscript');
+      if (noscripts.length) {
+        noscripts.forEach(ns => {
+          const match = ns.innerHTML.match(/src="([^"]+)"/);
+          if (match && match[1]) {
+            imgSources.push(match[1]);
+          }
+        });
       }
+
+      if (!imgSources.length) {
+        imgSources = [...LOOKBOOK_FALLBACK_IMAGES];
+      }
+
+      // If reverse track, reverse array for visual variety between the 2 tracks
+      if (reverse) {
+        imgSources = [...imgSources].reverse();
+      }
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'lookbook-marquee-wrapper';
+
+      const track = document.createElement('div');
+      track.className = reverse ? 'lookbook-marquee-track-reverse' : 'lookbook-marquee-track';
+      if (speed) track.style.animationDuration = speed + 's';
+
+      // Exactly 2 identical sets so translateX(-50%) loops with 100% mathematical precision
+      const loopList = [...imgSources, ...imgSources];
+      loopList.forEach(src => {
+        const item = document.createElement('div');
+        item.className = 'lookbook-item';
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Cintya Nunes Makeup Artistry - Noivas e Penteados';
+        img.loading = 'eager';
+        img.decoding = 'async';
+        item.appendChild(img);
+        track.appendChild(item);
+      });
+
+      wrapper.appendChild(track);
+      gallery.innerHTML = '';
+      gallery.appendChild(wrapper);
     });
-
-    if (!imgSources.length) return;
-
-    const wrapper = document.createElement('div');
-    wrapper.className = 'lookbook-marquee-wrapper';
-
-    const track = document.createElement('div');
-    track.className = reverse ? 'lookbook-marquee-track-reverse' : 'lookbook-marquee-track';
-    if (speed) track.style.animationDuration = speed + 's';
-
-    const fullList = [...imgSources, ...imgSources, ...imgSources];
-    fullList.forEach(src => {
-      const item = document.createElement('div');
-      item.className = 'lookbook-item';
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = 'Cintya Nunes Noivas e Penteados';
-      img.loading = 'lazy';
-      item.appendChild(img);
-      track.appendChild(item);
-    });
-
-    wrapper.appendChild(track);
-    gallery.innerHTML = '';
-    gallery.appendChild(wrapper);
   }
 
-  setupMarquee('.sie-portfolio-2_0, [data-sid="portfolio-2_0"]', false, 40);
-  setupMarquee('.sie-portfolio-2_1, [data-sid="portfolio-2_1"]', true, 35);
+  // Top track (moving left)
+  setupMarquee('.sie-portfolio-2_0, [data-sid="portfolio-2_0"]', false, 36);
+  // Bottom track (moving right in reverse)
+  setupMarquee('.sie-portfolio-2_1, [data-sid="portfolio-2_1"]', true, 32);
 
   // 7. Services Slideshow
   function setupSlideshow(selector, intervalTime) {
