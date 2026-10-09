@@ -3,6 +3,48 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/gallery",
+      "destination": "/the-looks.html"
+    },
+    {
+      "source": "/the-looks",
+      "destination": "/the-looks.html"
+    },
+    {
+      "source": "/gallery-1",
+      "destination": "/the-looks.html?look=gallery-1"
+    },
+    {
+      "source": "/gallery-2",
+      "destination": "/the-looks.html?look=gallery-2"
+    },
+    {
+      "source": "/gallery-3",
+      "destination": "/the-looks.html?look=gallery-3"
+    },
+    {
+      "source": "/gallery-4",
+      "destination": "/the-looks.html?look=gallery-4"
+    },
+    {
+      "source": "/experience",
+      "destination": "/experience.html"
+    },
+    {
+      "source": "/meet-cintya",
+      "destination": "/meet-cintya.html"
+    },
+    {
+      "source": "/book-me",
+      "destination": "/book-me.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

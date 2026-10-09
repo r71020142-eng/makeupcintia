@@ -279,5 +279,214 @@ document.addEventListener('DOMContentLoaded', function () {
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
   });
+
+  // 11. Bridal Lookbook Lightbox Modal & Gallery Link Interceptor
+  (function initBridalModal() {
+    const LOOKS_DATA = {
+      'gallery-1': {
+        title: 'Timeless Soft Glam',
+        location: 'Lowndes Grove, Charleston SC',
+        desc: 'Um visual clássico, romântico e atemporal. Pele aveludada com acabamento acetinado de longa duração, olhar iluminado e lábios nude rosados com brilho delicado.',
+        photos: [
+          '/assets/images/cintya/IMG_4501.jpg',
+          '/assets/images/cintya/IMG_4381.jpg',
+          '/assets/images/cintya/IMG_0661.jpg',
+          '/assets/images/cintya/IMG_0230.jpg'
+        ]
+      },
+      'gallery-2': {
+        title: 'Velvet Glam',
+        location: 'Lowndes Grove, Charleston SC',
+        desc: 'Intenso, sofisticado e marcante. Cobertura impecável com acabamento matte aveludado, contorno esculpido e olhos marcantes para noivas que desejam destaque deslumbrante nas fotos.',
+        photos: [
+          '/assets/images/cintya/IMG_4338.jpg',
+          '/assets/images/cintya/IMG_7555.jpg',
+          '/assets/images/cintya/IMG_6470.jpg',
+          '/assets/images/cintya/IMG_4653.jpg'
+        ]
+      },
+      'gallery-3': {
+        title: 'Old World Allure Glam',
+        location: 'Historic Downtown Charleston, SC',
+        desc: 'Inspirado na elegância vintage e do cinema clássico. Ondas Hollywood perfeitamente polidas, olhar esfumado elegante e boca marcante com presença inesquecível.',
+        photos: [
+          '/assets/images/cintya/IMG_7680.jpg',
+          '/assets/images/cintya/IMG_3541.jpg',
+          '/assets/images/cintya/IMG_2356.jpg',
+          '/assets/images/cintya/IMG_7017.jpg'
+        ]
+      },
+      'gallery-4': {
+        title: 'Rosé Romance Glam',
+        location: 'Rose Hill Mansion, SC',
+        desc: 'Romantismo e frescor com toques rosados e champagne. Iluminação orvalhada natural, pálpebras com brilho suave e cabelos com movimento orgânico dos sonhos.',
+        photos: [
+          '/assets/images/cintya/IMG_2356.jpg',
+          '/assets/images/cintya/IMG_3004.jpg',
+          '/assets/images/cintya/IMG_7017.jpg',
+          '/assets/images/cintya/IMG_4381.jpg'
+        ]
+      }
+    };
+
+    // Create modal HTML container if not present
+    let modal = document.getElementById('cintya-gallery-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'cintya-gallery-modal';
+      modal.innerHTML = `
+        <div class="cgm-container" role="dialog" aria-modal="true" aria-label="Galeria da Noiva">
+          <div class="cgm-header">
+            <div>
+              <div class="cgm-badge">Cintya Nunes Bridal Artistry • Lookbook</div>
+              <h2 class="cgm-title" id="cgmTitle">Timeless Soft Glam</h2>
+              <div class="cgm-location" id="cgmLocation">Lowndes Grove, Charleston SC</div>
+            </div>
+            <button type="button" class="cgm-close-btn" id="cgmClose" aria-label="Fechar Galeria">&times;</button>
+          </div>
+          <div class="cgm-body">
+            <div class="cgm-main-viewer">
+              <button type="button" class="cgm-nav-btn cgm-nav-prev" id="cgmPrev" aria-label="Foto Anterior">&#10094;</button>
+              <img src="" alt="Cintya Nunes Noiva" class="cgm-main-img" id="cgmMainImg">
+              <button type="button" class="cgm-nav-btn cgm-nav-next" id="cgmNext" aria-label="Próxima Foto">&#10095;</button>
+              <div class="cgm-counter" id="cgmCounter">1 / 4</div>
+            </div>
+            <div class="cgm-thumbs" id="cgmThumbs"></div>
+          </div>
+          <div class="cgm-footer">
+            <p class="cgm-desc" id="cgmDesc"></p>
+            <a href="#" target="_blank" class="cgm-cta-btn" id="cgmCta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Quero Este Look no Meu Casamento
+            </a>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+
+    let currentLookKey = 'gallery-1';
+    let currentPhotoIdx = 0;
+
+    function renderPhoto(idx) {
+      const data = LOOKS_DATA[currentLookKey];
+      if (!data || !data.photos.length) return;
+      currentPhotoIdx = (idx + data.photos.length) % data.photos.length;
+      const img = document.getElementById('cgmMainImg');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = data.photos[currentPhotoIdx];
+        img.style.opacity = '1';
+      }, 150);
+      document.getElementById('cgmCounter').textContent = `${currentPhotoIdx + 1} / ${data.photos.length}`;
+      
+      const thumbs = document.querySelectorAll('.cgm-thumb');
+      thumbs.forEach((th, i) => {
+        th.classList.toggle('is-active', i === currentPhotoIdx);
+      });
+    }
+
+    function openModal(lookKey) {
+      if (!LOOKS_DATA[lookKey]) lookKey = 'gallery-1';
+      currentLookKey = lookKey;
+      currentPhotoIdx = 0;
+      const data = LOOKS_DATA[lookKey];
+
+      document.getElementById('cgmTitle').textContent = data.title;
+      document.getElementById('cgmLocation').textContent = data.location;
+      document.getElementById('cgmDesc').textContent = data.desc;
+
+      const waMsg = `Olá Cintya! Amei o visual *${data.title}* do seu lookbook e gostaria de verificar disponibilidade para o meu casamento!`;
+      document.getElementById('cgmCta').href = `https://wa.me/message/JPA7IZW4D3R5G1?text=${encodeURIComponent(waMsg)}`;
+
+      const thumbsContainer = document.getElementById('cgmThumbs');
+      thumbsContainer.innerHTML = '';
+      data.photos.forEach((src, i) => {
+        const th = document.createElement('img');
+        th.src = src;
+        th.className = 'cgm-thumb' + (i === 0 ? ' is-active' : '');
+        th.alt = `${data.title} foto ${i+1}`;
+        th.addEventListener('click', () => renderPhoto(i));
+        thumbsContainer.appendChild(th);
+      });
+
+      renderPhoto(0);
+      modal.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('cgmClose').addEventListener('click', closeModal);
+    document.getElementById('cgmPrev').addEventListener('click', () => renderPhoto(currentPhotoIdx - 1));
+    document.getElementById('cgmNext').addEventListener('click', () => renderPhoto(currentPhotoIdx + 1));
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (!modal.classList.contains('is-active')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') renderPhoto(currentPhotoIdx - 1);
+      if (e.key === 'ArrowRight') renderPhoto(currentPhotoIdx + 1);
+    });
+
+    // Intercept all clicks on look gallery triggers
+    function bindTriggers() {
+      const selectors = [
+        'a[href*="gallery-1"]', 'a[href*="gallery-2"]', 'a[href*="gallery-3"]', 'a[href*="gallery-4"]',
+        '[data-link*="gallery-1"]', '[data-link*="gallery-2"]', '[data-link*="gallery-3"]', '[data-link*="gallery-4"]',
+        '.sib-gallery-1 [data-sid$="_0"]', '.sib-gallery-1 [data-sid$="_4"]', '.sib-gallery-1 [data-sid$="_6"]',
+        '.sib-gallery-2 [data-sid$="_0"]', '.sib-gallery-2 [data-sid$="_4"]', '.sib-gallery-2 [data-sid$="_6"]',
+        '.sib-gallery-3 [data-sid$="_0"]', '.sib-gallery-3 [data-sid$="_4"]', '.sib-gallery-3 [data-sid$="_6"]',
+        '.sib-gallery-4 [data-sid$="_0"]', '.sib-gallery-4 [data-sid$="_4"]', '.sib-gallery-4 [data-sid$="_6"]'
+      ];
+
+      document.querySelectorAll(selectors.join(', ')).forEach(el => {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Find look ID
+          let lookId = 'gallery-1';
+          const href = this.getAttribute('href') || '';
+          const dataLink = this.getAttribute('data-link') || '';
+          const parentCanvas = this.closest('.sb');
+
+          if (href.includes('gallery-2') || dataLink.includes('gallery-2') || (parentCanvas && parentCanvas.id === 'gallery-2')) {
+            lookId = 'gallery-2';
+          } else if (href.includes('gallery-3') || dataLink.includes('gallery-3') || (parentCanvas && parentCanvas.id === 'gallery-3')) {
+            lookId = 'gallery-3';
+          } else if (href.includes('gallery-4') || dataLink.includes('gallery-4') || (parentCanvas && parentCanvas.id === 'gallery-4')) {
+            lookId = 'gallery-4';
+          }
+
+          openModal(lookId);
+        });
+      });
+    }
+
+    bindTriggers();
+
+    // Check URL parameters / hash on page load
+    const urlParams = new URLSearchParams(window.location.search);
+    const lookParam = urlParams.get('look');
+    const hash = window.location.hash.replace('#', '');
+    if (lookParam && LOOKS_DATA[lookParam]) {
+      setTimeout(() => openModal(lookParam), 400);
+    } else if (hash && LOOKS_DATA[hash]) {
+      setTimeout(() => openModal(hash), 400);
+    }
+
+    // Expose globally for testing
+    window.cintyaOpenGallery = openModal;
+    window.cintyaCloseGallery = closeModal;
+  })();
+
 });
 

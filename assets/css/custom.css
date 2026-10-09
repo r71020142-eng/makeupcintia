@@ -821,12 +821,17 @@ body {
     width: 100% !important;
     height: 100% !important;
   }
-  .sie-hero_3, .sie-hero_1, #hero .sie-hero_1, .m .sie-hero_1 {
+  body:not(.the-looks-page) .sie-hero_3,
+  body:not(.the-looks-page) .sie-hero_1,
+  body:not(.the-looks-page) #hero .sie-hero_1,
+  body:not(.the-looks-page) .m .sie-hero_1 {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
   }
-  .m .sie-hero_4, #hero .sie-hero_4, .sie-hero_4 {
+  body:not(.the-looks-page) .m .sie-hero_4,
+  body:not(.the-looks-page) #hero .sie-hero_4,
+  body:not(.the-looks-page) .sie-hero_4 {
     position: absolute !important;
     top: auto !important;
     bottom: 0 !important;
@@ -2833,3 +2838,674 @@ body {
 
 
 
+
+/* =========================================================
+   THE LOOKS (GALLERY PAGE) & BRIDAL LIGHTBOX MODAL
+   ========================================================= */
+
+/* A. HERO SECTION: PURGE OLD CUTOUT & SCRIPT, HIGH CONTRAST TYPOGRAPHY */
+.the-looks-page .sie-hero_2,
+.the-looks-page #hero .sie-hero_2,
+.the-looks-page .sie-hero_7,
+.the-looks-page #hero .sie-hero_7 {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.the-looks-page #hero .sie-hero_0 {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
+}
+
+.the-looks-page #hero .sie-hero_0 .se-img {
+  background-image: url('../images/cintya/IMG_3004.jpg') !important;
+  background-size: cover !important;
+  background-position: center 25% !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Hero dark gradient overlay */
+.the-looks-page #hero {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.the-looks-page #hero .sie-hero_3 {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 420px !important;
+  max-height: 100% !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: linear-gradient(
+    to top,
+    rgba(18, 14, 12, 0.98) 0%,
+    rgba(18, 14, 12, 0.85) 45%,
+    rgba(18, 14, 12, 0.40) 75%,
+    transparent 100%
+  ) !important;
+}
+.the-looks-page #hero .sie-hero_3 .se-simple {
+  display: none !important;
+}
+
+/* Hero Title: The Looks */
+.the-looks-page #hero .sie-hero_1 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 4 !important;
+}
+
+@media (min-width: 769px) {
+  .the-looks-page #hero .sie-hero_1 {
+    position: absolute !important;
+    top: 70px !important;
+    left: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .the-looks-page #hero .sie-hero_1-text {
+    font-family: 'PromenadeRegular', 'Cormorant Garamond', Georgia, serif !important;
+    font-size: min(13vw, 150px) !important;
+    color: #FAF7F2 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    line-height: 0.9 !important;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+    text-align: center !important;
+    display: block !important;
+  }
+
+  .the-looks-page #hero .sie-hero_4 {
+    position: absolute !important;
+    bottom: 145px !important;
+    left: 80px !important;
+    width: 480px !important;
+    height: auto !important;
+    z-index: 4 !important;
+    text-align: left !important;
+  }
+  .the-looks-page #hero .sie-hero_4-text {
+    font-family: 'Hind', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    line-height: 1.6 !important;
+    color: #FAF7F2 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+    text-align: left !important;
+    display: block !important;
+  }
+
+  .the-looks-page #hero .sie-hero_6 {
+    position: absolute !important;
+    bottom: 125px !important;
+    left: 80px !important;
+    width: 480px !important;
+    height: 1px !important;
+    z-index: 4 !important;
+  }
+  .the-looks-page #hero .sie-hero_6 svg {
+    width: 480px !important;
+    height: 1px !important;
+    stroke: rgba(200, 162, 97, 0.7) !important;
+  }
+
+  .the-looks-page #hero .sie-hero_5 {
+    position: absolute !important;
+    bottom: 30px !important;
+    left: 80px !important;
+    width: 480px !important;
+    height: auto !important;
+    z-index: 4 !important;
+    text-align: left !important;
+  }
+  .the-looks-page #hero .sie-hero_5-text {
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 14.5px !important;
+    line-height: 1.75 !important;
+    color: #FAF7F2 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+    text-align: left !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .the-looks-page #hero .sie-hero_1 {
+    position: absolute !important;
+    top: 75px !important;
+    left: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .the-looks-page #hero .sie-hero_1-text {
+    font-family: 'PromenadeRegular', 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 52px !important;
+    color: #FAF7F2 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1 !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8) !important;
+    text-align: center !important;
+    display: block !important;
+  }
+
+  .the-looks-page #hero .sie-hero_4 {
+    position: absolute !important;
+    bottom: 220px !important;
+    left: 10px !important;
+    width: 300px !important;
+    height: auto !important;
+    z-index: 4 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .the-looks-page #hero .sie-hero_4-text {
+    font-family: 'Hind', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 9.5px !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    line-height: 1.55 !important;
+    color: #FAF7F2 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+    text-align: center !important;
+    display: block !important;
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+
+  .the-looks-page #hero .sie-hero_6 {
+    position: absolute !important;
+    bottom: 200px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 160px !important;
+    height: 1px !important;
+    z-index: 4 !important;
+  }
+  .the-looks-page #hero .sie-hero_6 svg {
+    width: 160px !important;
+    height: 1px !important;
+    stroke: rgba(200, 162, 97, 0.7) !important;
+  }
+
+  .the-looks-page #hero .sie-hero_5 {
+    position: absolute !important;
+    bottom: 18px !important;
+    left: 10px !important;
+    width: 300px !important;
+    height: auto !important;
+    z-index: 4 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .the-looks-page #hero .sie-hero_5-text {
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    color: #FAF7F2 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+    text-align: center !important;
+    display: block !important;
+    white-space: normal !important;
+    word-break: normal !important;
+  }
+}
+
+/* B. DESKTOP GALLERY CARDS: REMOVE GHOST CANVAS & CENTER LOOKS */
+.the-looks-page #scroll-image,
+.the-looks-page #buffer {
+  display: none !important;
+}
+
+@media (min-width: 769px) {
+  .the-looks-page .sib-gallery-1,
+  .the-looks-page .sib-gallery-2,
+  .the-looks-page .sib-gallery-3,
+  .the-looks-page .sib-gallery-4 {
+    padding: 60px 0 80px 0 !important;
+    height: auto !important;
+    min-height: 760px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .the-looks-page .sib-gallery-1 .sc,
+  .the-looks-page .sib-gallery-2 .sc,
+  .the-looks-page .sib-gallery-3 .sc,
+  .the-looks-page .sib-gallery-4 .sc {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    height: 720px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Center the look image card */
+  .the-looks-page .sie-gallery-1_6,
+  .the-looks-page .sie-gallery-2_6,
+  .the-looks-page .sie-gallery-3_6,
+  .the-looks-page .sie-gallery-4_6 {
+    left: calc(50% - 195px) !important;
+    top: 0px !important;
+    width: 390px !important;
+    height: 490px !important;
+    border-radius: 4px !important;
+    box-shadow: 0 14px 35px rgba(20, 16, 14, 0.12) !important;
+    cursor: pointer !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease !important;
+  }
+  .the-looks-page .sie-gallery-1_6:hover,
+  .the-looks-page .sie-gallery-2_6:hover,
+  .the-looks-page .sie-gallery-3_6:hover,
+  .the-looks-page .sie-gallery-4_6:hover {
+    transform: translateY(-4px) scale(1.015) !important;
+    box-shadow: 0 20px 45px rgba(20, 16, 14, 0.18) !important;
+  }
+
+  /* Center top gold divider */
+  .the-looks-page .sie-gallery-1_5,
+  .the-looks-page .sie-gallery-2_5,
+  .the-looks-page .sie-gallery-3_5,
+  .the-looks-page .sie-gallery-4_5 {
+    left: calc(50% - 240px) !important;
+    top: 520px !important;
+    width: 480px !important;
+    height: 1px !important;
+  }
+  .the-looks-page .sie-gallery-1_5 svg,
+  .the-looks-page .sie-gallery-2_5 svg,
+  .the-looks-page .sie-gallery-3_5 svg,
+  .the-looks-page .sie-gallery-4_5 svg {
+    width: 480px !important;
+    stroke: rgba(200, 162, 97, 0.8) !important;
+  }
+
+  /* Center look title */
+  .the-looks-page .sie-gallery-1_4,
+  .the-looks-page .sie-gallery-2_4,
+  .the-looks-page .sie-gallery-3_4,
+  .the-looks-page .sie-gallery-4_4 {
+    left: 0 !important;
+    top: 540px !important;
+    width: 100% !important;
+    height: 40px !important;
+    text-align: center !important;
+  }
+  .the-looks-page .sie-gallery-1_4-text,
+  .the-looks-page .sie-gallery-2_4-text,
+  .the-looks-page .sie-gallery-3_4-text,
+  .the-looks-page .sie-gallery-4_4-text {
+    font-family: 'PromenadeRegular', 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 42px !important;
+    text-transform: uppercase !important;
+    color: #221C18 !important;
+    letter-spacing: 0.03em !important;
+    text-align: center !important;
+    line-height: 1 !important;
+    display: block !important;
+    cursor: pointer !important;
+  }
+
+  /* Center location text and decorative side lines */
+  .the-looks-page .sie-gallery-1_2,
+  .the-looks-page .sie-gallery-2_2,
+  .the-looks-page .sie-gallery-3_2,
+  .the-looks-page .sie-gallery-4_2 {
+    left: 0 !important;
+    top: 600px !important;
+    width: 100% !important;
+    height: 20px !important;
+    text-align: center !important;
+  }
+  .the-looks-page .sie-gallery-1_2-text,
+  .the-looks-page .sie-gallery-2_2-text,
+  .the-looks-page .sie-gallery-3_2-text,
+  .the-looks-page .sie-gallery-4_2-text {
+    font-family: 'Hind', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    color: #5C4A3E !important;
+    text-align: center !important;
+    display: block !important;
+  }
+
+  .the-looks-page .sie-gallery-1_3,
+  .the-looks-page .sie-gallery-2_3,
+  .the-looks-page .sie-gallery-3_3,
+  .the-looks-page .sie-gallery-4_3 {
+    left: calc(50% - 195px) !important;
+    top: 609px !important;
+    width: 45px !important;
+    height: 1px !important;
+  }
+  .the-looks-page .sie-gallery-1_1,
+  .the-looks-page .sie-gallery-2_1,
+  .the-looks-page .sie-gallery-3_1,
+  .the-looks-page .sie-gallery-4_1 {
+    left: calc(50% + 150px) !important;
+    top: 609px !important;
+    width: 45px !important;
+    height: 1px !important;
+  }
+
+  /* Center the "VIEW THE GALLERY" CTA button */
+  .the-looks-page .sie-gallery-1_0,
+  .the-looks-page .sie-gallery-2_0,
+  .the-looks-page .sie-gallery-3_0,
+  .the-looks-page .sie-gallery-4_0 {
+    left: calc(50% - 115px) !important;
+    top: 645px !important;
+    width: 230px !important;
+    height: 44px !important;
+    cursor: pointer !important;
+  }
+}
+
+/* Button Luxury Styling (Mobile & Desktop) */
+.the-looks-page .sie-gallery-1_0 .se-button,
+.the-looks-page .sie-gallery-2_0 .se-button,
+.the-looks-page .sie-gallery-3_0 .se-button,
+.the-looks-page .sie-gallery-4_0 .se-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #5C4A3E !important;
+  color: #FAF7F2 !important;
+  border-radius: 2px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 14px rgba(92, 74, 62, 0.25) !important;
+  cursor: pointer !important;
+}
+.the-looks-page .sie-gallery-1_0:hover .se-button,
+.the-looks-page .sie-gallery-2_0:hover .se-button,
+.the-looks-page .sie-gallery-3_0:hover .se-button,
+.the-looks-page .sie-gallery-4_0:hover .se-button {
+  background: #3D2F26 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(92, 74, 62, 0.35) !important;
+}
+.the-looks-page .sie-gallery-1_0 .st-primary span,
+.the-looks-page .sie-gallery-2_0 .st-primary span,
+.the-looks-page .sie-gallery-3_0 .st-primary span,
+.the-looks-page .sie-gallery-4_0 .st-primary span {
+  font-family: 'Hind', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 11.5px !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: #FAF7F2 !important;
+}
+
+/* C. BRIDAL LIGHTBOX MODAL */
+#cintya-gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(14, 11, 9, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#cintya-gallery-modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cgm-container {
+  background: #FAF7F2;
+  width: 100%;
+  max-width: 920px;
+  max-height: 92vh;
+  border-radius: 8px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#cintya-gallery-modal.is-active .cgm-container {
+  transform: scale(1);
+}
+
+.cgm-header {
+  padding: 20px 28px 16px 28px;
+  border-bottom: 1px solid rgba(200, 162, 97, 0.3);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #FAF7F2;
+  position: relative;
+}
+
+.cgm-badge {
+  font-family: 'Hind', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #C8A261;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cgm-title {
+  font-family: 'PromenadeRegular', 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  color: #221C18;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.cgm-location {
+  font-family: 'Hind', sans-serif;
+  font-size: 12px;
+  color: #7D6B5D;
+  margin-top: 4px;
+  letter-spacing: 0.08em;
+}
+
+.cgm-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #5C4A3E;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+.cgm-close-btn:hover {
+  color: #221C18;
+  background: rgba(92, 74, 62, 0.1);
+  transform: scale(1.1);
+}
+
+.cgm-body {
+  padding: 20px 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cgm-main-viewer {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #14100E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .cgm-main-viewer {
+    height: 320px;
+  }
+  .cgm-container {
+    max-height: 96vh;
+  }
+  .cgm-header {
+    padding: 16px 18px;
+  }
+  .cgm-title {
+    font-size: 22px;
+  }
+  .cgm-body {
+    padding: 14px 18px;
+  }
+}
+
+.cgm-main-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+}
+
+.cgm-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(18, 14, 12, 0.65);
+  color: #FAF7F2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+.cgm-nav-btn:hover {
+  background: rgba(18, 14, 12, 0.95);
+  color: #C8A261;
+  transform: translateY(-50%) scale(1.08);
+}
+.cgm-nav-prev { left: 14px; }
+.cgm-nav-next { right: 14px; }
+
+.cgm-counter {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  background: rgba(18, 14, 12, 0.7);
+  color: #FAF7F2;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.cgm-thumbs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 4px 0;
+}
+
+.cgm-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 4px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+.cgm-thumb:hover {
+  opacity: 0.9;
+}
+.cgm-thumb.is-active {
+  border-color: #C8A261;
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.cgm-footer {
+  padding: 14px 28px 20px 28px;
+  border-top: 1px solid rgba(200, 162, 97, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  background: #FAF7F2;
+}
+
+.cgm-desc {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #5C4A3E;
+  margin: 0;
+  max-width: 520px;
+}
+
+.cgm-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: #FFFFFF !important;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+  transition: all 0.25s ease;
+}
+.cgm-cta-btn:hover {
+  background: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
